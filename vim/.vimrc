@@ -29,7 +29,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'ap/vim-css-color'
 
 "colorschemes
-Plugin 'trapd00r/neverland-vim-theme'
+Plugin 'cyma/neverland-vim-theme'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'dracula/vim'
 Plugin 'whatyouhide/vim-gotham'
@@ -61,12 +61,18 @@ set background=dark
 let g:airline_theme = 'neverland'
 let g:airline#extensions#whitespace#enabled = 0
 
+" Allow color schemes to do bright colors without forcing bold.
+if &t_Co == 8 && $TERM !~# '^Eterm'
+  set t_Co=16
+endif
 
 "Ready to go settings
 
 set noerrorbells
 set relativenumber
 set nu
+set ruler
+set autoread
 set nowrap
 set tabstop=4
 set shiftwidth=4
@@ -74,22 +80,24 @@ set nohlsearch
 set softtabstop=4
 set hidden
 set expandtab
+set smarttab
 set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set smartindent
 set autoindent
-set smartcase
+set wildmenu
 set incsearch
+set smartcase
+set ignorecase
 set scrolloff=8
 set cmdheight=2
 set updatetime=50
-set showmatch
-
+set laststatus=2
 set signcolumn=yes
 set noshowmode
-
+set showmatch
 
 "Automatic delete trailing whitespace on save
 
