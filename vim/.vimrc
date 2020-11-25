@@ -1,4 +1,4 @@
-"runtime! debian.vim
+runtime! debian.vim
 
 syntax on
 
@@ -15,20 +15,19 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
-Plugin 'jremmen/vim-ripgrep'
-Plugin 'preservim/nerdtree'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
+Plugin 'jremmen/vim-ripgrep'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'mbbill/undotree'
+Plugin 'preservim/nerdtree'
+
 Plugin 'lervag/vimtex'
 Plugin 'xuhdev/vim-latex-live-preview'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-commentary'
-Plugin 'mbbill/undotree'
 Plugin 'vim-utils/vim-man'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+
 Plugin 'ap/vim-css-color'
 
-"colorschemes
 Plugin 'cyma/neverland-vim-theme'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'dracula/vim'
@@ -40,74 +39,93 @@ call vundle#end()
 
 filetype plugin indent on
 
-"Finishing Plugin Sections
+runtime! macros/matchit.vim
+
+"Finishing Plugin Section
 
 
-"Colorscheme section
+"Begin eyecandy section"
 
-colorscheme neverland2
+colorscheme  neverland2
 
 
 set termguicolors
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
-"In case background color is not correct, set manually:
-"hi Normal guibg=#1d1f26 "dracula_bold
 
-set background=dark
+if (g:colors_name == 'dracula')
+    hi Normal guibg = #1d1f26
+endif
 
-"Airline
-let g:airline_theme = 'neverland'
-let g:airline#extensions#whitespace#enabled = 0
+
+"set background = dark
 
 " Allow color schemes to do bright colors without forcing bold.
 if &t_Co == 8 && $TERM !~# '^Eterm'
   set t_Co=16
 endif
 
+"Finish eyecandy section
+
+
 "Ready to go settings
 
-set noerrorbells
 set relativenumber
-set nu
-set ruler
-set autoread
-set nowrap
-set tabstop=4
+set number
+
+set autoindent
+set smartindent
+"set backspace=indent,eol,start
+
+set tabstop=4 softtabstop=4
 set shiftwidth=4
-set nohlsearch
-set softtabstop=4
 set hidden
 set expandtab
 set smarttab
+
+"set nowrap
+set display+=lastline
+
+set laststatus=2
+set ruler
+set cmdheight=2
+set wildmenu
+
+
 set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
 set undofile
-set smartindent
-set autoindent
-set wildmenu
+
 set incsearch
+set nohlsearch
 set smartcase
 set ignorecase
+
 set scrolloff=8
-set cmdheight=2
-set updatetime=50
-set laststatus=2
 set signcolumn=yes
-set noshowmode
 set showmatch
 
-"Automatic delete trailing whitespace on save
+set noerrorbells
 
+
+"If a file has been modified outside of vim, automatically reads it again
+set autoread
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience. Increase in case latex-preview does not
+" preview correctly
+set updatetime=50
+
+
+
+"Automatic delete trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
 " Return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-
-"Ripgrep
 "Allow rg faster search
 if executable('rg')
     let g:rg_derive_root='true'
