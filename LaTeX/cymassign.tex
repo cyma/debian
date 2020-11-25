@@ -1,0 +1,219 @@
+% File   : LaTeX template
+% Author : cyma <git.cyma@protonmail.ch>
+% Source : <https://github.com/cyma/debian>
+% License : MIT
+
+
+%-----------------------------------
+% PACKAGES AND CONFIGURATIONS
+%-----------------------------------
+
+\documentclass[a4paper,twoside,11pt]{article}
+\usepackage[utf8]{inputenc} %inputting international characters
+\usepackage[T1]{fontenc} % output font encoding
+\usepackage[spanish]{babel} %change to your language
+\usepackage{xcolor} % color package
+\usepackage{fancyhdr} %  page margings and sizes, headers and footers,and the proper placement of figures and tables
+\usepackage{hyperref} % create hyperlinks
+\usepackage{extramarks} % combine with fancyhdr to give extra customization
+\usepackage{geometry} %  customize page layout, implementing auto-centering and auto-balancing mechanisms
+\usepackage{graphicx} % key-value interface for optional arguments to the \includegraphics command.
+%\graphicspath{{examples/documentation/images/}{images/}} % Paths in which to look for images
+
+\usepackage{setspace} % change spacing within the document
+\usepackage{framed} % framed or shaded regions that can break across pages
+\usepackage{enumitem} % control layout of itemize, enumerate, description
+\usepackage{caption} % customising captions in floating environments
+\usepackage{subcaption} % support for sub-captions
+%\usepackage{schemata} % print topical diagrams
+\usepackage[all]{xy} % A package for typesetting a variety of graphs and diagrams with TeX
+
+\usepackage{amsmath} % mathematical typesetting
+\usepackage{amssymb} % mathematical symbols
+\usepackage{mathrsfs} % \mathscr script font that is more elaborate than the ``calligraphic'' font obtained by \mathcal
+\usepackage{extarrows} % extra Arrows beyond those provided in amsmath
+\usepackage{mathtools} % enhance the appearance of documents containing a lot of mathematics
+\usepackage{cancel} % a package to draw diagonal lines (“cancelling” a term) and arrows with limits (cancelling a term “to a value”) through parts of maths formulae.
+\usepackage{halloweenmath} % Scary and creepy math symbols
+%\usepackage{svrsymbols} % A font with symbols for use in physics texts
+%\usepackage{mhchem} % typeset chemical formulae/equations and Risk and Safety phrases
+%\usepackage{bohr} % simple atom representation according to the Bohr model
+%\usepackage{marvosym} % symbols for structural engineering; symbols for steel cross-sections; astronomy signs (sun, moon, planets); the 12 signs of the zodiac; scissor symbols; CE sign and others.
+
+%\usepackage[backend=bibtex,style=authoryear,natbib=true]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA) \addbibresource{example.bib} % The filename of the bibliography
+%\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+%\addbibresource{example.bib}  The filename of the bibliography
+
+
+\geometry{lmargin=2.5cm,rmargin=2.5cm,tmargin=3cm,bmargin=2.5cm}
+
+\setlength{\parindent}{0pt} % remove indent
+
+%\sloppy % rules to fix some line breaking
+%\fuzzy % default LaTeX rules
+%\date{}
+
+
+\begin{document}
+
+% Uncomment next three lines if you want default values
+
+
+
+%-----------------------------------
+%           TITLE PAGE
+%-----------------------------------
+
+\begin{titlepage}
+ \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+	\center
+
+	%------------------------------------------------
+	%	Headings
+	%------------------------------------------------
+
+    \textsc{\LARGE \bf\textcolor{red}{Church of Emacs}}\\[1.5cm] % Main heading such as the name of your university/college
+
+    \textsc{\Large \textcolor{red}{Pagan Estudies}}\\[0.5cm] % Major heading such as course name
+
+	\textsc{\large Vi IMproved}\\[0.5cm] % Minor heading such as course title
+
+	%------------------------------------------------
+	%	Title
+	%------------------------------------------------
+
+	\HRule\\[0.4cm]
+
+    {\huge\bfseries $\mathwitch$ Number VI-VI-VI $\reversemathwitch$}\\[0.4cm] % Title of your document
+
+	\HRule\\[1.5cm]
+
+	%------------------------------------------------
+	%	Author(s)
+	%------------------------------------------------
+
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushleft}
+			\large
+            \textit{\textcolor{red}{Autor}}\\
+			cyma % Your name
+		\end{flushleft}
+	\end{minipage}
+	~
+	\begin{minipage}{0.4\textwidth}
+		\begin{flushright}
+			\large
+            \textit{\textcolor{red}{Supervisor}}\\
+			Flying Spaghetti Monster% Supervisor's name
+		\end{flushright}
+	\end{minipage}
+
+	% If you don't want a supervisor, uncomment the two lines below and comment the code above
+	%{\large\textit{Author}}\\
+	%The \textsc{Coconut} % Oil
+
+	%------------------------------------------------
+	%	Logo
+	%------------------------------------------------
+
+	%\vfill
+	%\includegraphics[width=0.3\textwidth]{/path/to/picture.jpg}\\[1cm] % Include a department/university logo.
+
+	%---------------------------------------------------------------------------
+
+
+    %------------------------------------------------
+	%	Date
+	%------------------------------------------------
+
+	\vfill % Position the date 3/4 down the remaining page
+
+	{\large\today} % Date, change the \today to a set date if you want to be precise
+
+
+    \vfill % Push the date up 1/4 of the remaining page
+
+\end{titlepage}
+
+
+
+%-------------------------------------------------------------------------------
+%	     CONTENT - CHAPTERS
+%-------------------------------------------------------------------------------
+
+\pagenumbering{roman}
+
+
+\pagestyle{fancy}
+
+
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}} %header conf. to show section
+
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0.4pt}
+
+
+
+\fancyhead{}
+
+\fancyfoot{}
+\fancyfoot[RE]{\thepage}
+\fancyfoot[LO]{\thepage}
+
+\renewcommand{\contentsname}{Contenido}
+
+\doublespacing
+    \tableofcontents % Prints the main table of contents
+        \addtocontents{toc}{~\hfill\textbf{\small{Página}}\par} % add pages to toc
+\singlespacing
+
+%-------------------------------------------------------------------------------
+%                   PRE-SECTIONS
+%-------------------------------------------------------------------------------
+
+\newpage
+
+% In case you need to add more lists, do it here
+
+\renewcommand{\listfigurename}{Lista de figuras}
+\renewcommand{\listtablename}{Lista de cuadros}
+
+\listoffigures % Prints the list of figures move
+    \addcontentsline{toc}{section}{\listfigurename}
+
+\listoftables % Prints the list of tables
+    \addcontentsline{toc}{section}{\listtablename}
+
+\newpage
+
+\section*{Introducción}
+    \addcontentsline{toc}{section}{Introducción}
+
+
+%---------------------------------------------------------------------------------------
+%               BEGIN SECTIONS AREA
+%---------------------------------------------------------------------------------------
+
+\newpage
+
+\pagenumbering{arabic}
+
+\fancyhead[RE,LO]{\textsl{\rightmark}} % Show the section/subsection in header
+
+% Comment next line in case you need to reset equation counter in each section
+%\counterwithin*{equation}{section}
+
+\section{Exit VIM}
+
+
+
+\newpage
+\section{Celebrate Pirate's Day}
+
+
+
+
+\end{document}
+
+
