@@ -34,7 +34,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'cyma/neverland-vim-theme'
 Plugin 'nanotech/jellybeans.vim'
-
+Plugin 'morhetz/gruvbox'
 call vundle#end()
 
 
@@ -57,7 +57,7 @@ colorscheme  jellybeans
 
 
 if (g:colors_name == 'gruvbox')
-    let g:gruvbox_contrast_dark = 'light'
+    let g:gruvbox_contrast_dark = 'hard'
 endif
 
 
