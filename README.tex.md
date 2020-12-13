@@ -1,20 +1,21 @@
-$\section{VIM}$
+VIM
+----
+Ready to go $\textit{.vimrc}$ with $\textit{autocomplete}$ $\textbf{CoC}$ and \LaTeX{} support.
 
-Ready to go \textit{.vimrc} with \textit{autocomplete} \textbf{CoC} and \LaTeX{} support.
-
-\section{i3wm}
-    \subsection{config}
-        Adjust volume with Pulse Audio, 0 borders, vi-like bindings, external display management mode and screenshots with scrot.
-    \subsection{i3blocks}
-        Basic display information. Added CAPS key detector and custom VPN.
-        \subsubsection{myvpn}
-            Minimal openvpn detector.
-\section{.Xresources}
+i3wm
+----
+    1. config: Adjust volume with Pulse Audio, 0 borders, vi-like bindings, external display management mode and screenshots with scrot.
+    2. i3blocks: Basic display information. Added CAPS key detector and custom VPN.
+    3. myvpn: Minimal openvpn detector.
+.Xresources
+-----------
 URxvt with jellybeans colorscheme.
 
-\section{tmux}
+tmux
+----
 Copy/Paste in vi-mode, clipboard support and vim-like pane switching.
 
-\section{\LaTeX{}}
-Science PhD template look-alike, calc2latex macro (still works in LibreOffice), and Rhodia-like dotted grid a4-paper.$
+$\LaTeX{}$
+--------
+Science PhD template look-alike, calc2latex macro (still works in LibreOffice), and Rhodia-like dotted grid a4-paper.
 
