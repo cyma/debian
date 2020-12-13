@@ -29,12 +29,10 @@ Plugin 'vim-utils/vim-man'
 
 Plugin 'ap/vim-css-color'
 
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-
+Plugin 'itchyny/lightline.vim'
+Plugin 'nanotech/jellybeans.vim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'cyma/neverland-vim-theme'
-Plugin 'nanotech/jellybeans.vim'
 Plugin 'morhetz/gruvbox'
 call vundle#end()
 
@@ -50,13 +48,29 @@ runtime! macros/matchit.vim
 
 colorscheme  jellybeans
 
-let g:airline#extensions#whitespace#enabled = 0
-
 if (g:colors_name == 'gruvbox')
     let g:gruvbox_contrast_dark = 'hard'
 endif
+
 if (g:colors_name == 'jellybeans')
     let g:jellybeans_use_term_italics = 1
+endif
+
+"Add git branch from fugitive and set colorscheme for lightline
+if filereadable(expand("~/.vim/bundle/lightline.vim/plugin/lightline.vim"))
+    set noshowmode
+    let g:lightline = {
+        \ 'active': {
+        \   'left': [ [ 'mode', 'paste' ],
+        \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+        \ },
+        \ 'component_function': {
+        \   'gitbranch': 'FugitiveHead'
+        \ },
+        \ }
+    if(g:colors_name == 'jellybeans')
+        let g:lightline = {'colorscheme' : 'jellybeans'}
+    endif
 endif
 
 set background=dark
