@@ -1,6 +1,6 @@
 VIM
 ----
-Ready to go $\textit{.vimrc}$ with $\textit{autocomplete}$ $\textbf{CoC}$ and \LaTeX{} support.
+Ready to go .vimrc with autocomplete (CoC) and LaTeX support.
 
 i3wm
 ----
@@ -15,7 +15,7 @@ tmux
 ----
 Copy/Paste in vi-mode, clipboard support and vim-like pane switching.
 
-$\LaTeX{}$
+LaTeX
 --------
 Science PhD template look-alike, calc2latex macro (still works in LibreOffice), and Rhodia-like dotted grid a4-paper.
 
