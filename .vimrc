@@ -166,6 +166,13 @@ let g:livepreview_previewer = 'zathura'
 let g:livepreview_engine = 'pdflatex'
 let g:livepreview_cursorhold_recompile = 0
 
+if filereadable(expand("~/.vim/bundle/coc.nvim/plugin/coc.vim"))
+    call coc#config('list.source.bibtex', {
+    \  'files': [
+    \    '~/.cyma/debian/LaTeX/article/sample.bib'
+    \]
+    \})
+endif
 
 "Maps
 

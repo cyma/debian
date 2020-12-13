@@ -1,0 +1,13 @@
+\documentclass{article}
+\pagenumbering{gobble}
+\usepackage[a4paper,hmargin={0mm,3mm},vmargin={5mm,5mm}]{geometry}
+\usepackage{tikz}
+\begin{document}
+  \begin{tikzpicture}[scale=.5]
+    \foreach \x in {0,...,41}
+    \foreach \y in {0,...,57}
+    {
+  \fill[gray!75] (\x,\y) circle (0.06cm);
+    }
+  \end{tikzpicture}
+\end{document}
