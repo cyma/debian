@@ -169,13 +169,6 @@ let g:livepreview_previewer = 'zathura'
 let g:livepreview_engine = 'pdflatex'
 let g:livepreview_cursorhold_recompile = 0
 
-if filereadable(expand("~/.vim/bundle/coc.nvim/plugin/coc.vim"))
-    call coc#config('list.source.bibtex', {
-    \  'files': [
-    \    '~/.cyma/debian/LaTeX/article/sample.bib'
-    \]
-    \})
-endif
 
 "Maps
 let mapleader = " "
@@ -202,7 +195,10 @@ nnoremap <leader>Y gg"+yG
 
 " CONQUER of COMPLETION (CoC)
 
+if filereadable(expand("~/.vim/bundle/coc.nvim/plugin/coc.vim"))
+
 " Extensions
+
 let g:coc_global_extensions=[
     \'coc-clangd',
     \'coc-sh',
@@ -216,6 +212,15 @@ let g:coc_global_extensions=[
     \'coc-highlight',
     \'coc-marketplace',
     \]
+
+
+" Configuration for coc-bibtex
+    call coc#config('list.source.bibtex', {
+    \  'files': [
+    \    '~/.cyma/debian/LaTeX/article/sample.bib'
+    \]
+    \})
+
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -329,3 +334,5 @@ nmap <leader>qf  <Plug>(coc-fix-current)
     nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
     nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+
+endif
