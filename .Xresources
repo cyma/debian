@@ -1,11 +1,16 @@
-URxvt.font: xft:Hack:size=12
-URxvt.boldFont: xft:Hack:size=12
-URxvt.italicFont: xft:Hack:size=12
+URxvt.font: xft:hack:size=12
+URxvt.boldFont: xft:hack:bold:size=12
+URxvt.italicFont: xft:hack:italic:size=12
 
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
-URxvt.scrollBar: false
 
+!disable scrollback buffer for secondary screen
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+
+URxvt.scrollBar: false
+URxvt.loginShell: true
 
 ! Jellybeans colorscheme
 ! Generated with :
@@ -15,8 +20,7 @@ URxvt.scrollBar: false
 *.background:  #121212
 *.cursorColor: #ffa560
 !
-! Black
-*.color0:      #929292
+! Black *.color0:      #929292
 *.color8:      #bdbdbd
 !
 ! Red
