@@ -66,6 +66,7 @@ endif
 
 
 "Ready to go settings
+set encoding=utf-8
 
 set relativenumber
 set number
