@@ -135,6 +135,9 @@ set updatetime=50
 "Don't pass messages to [ins-completion-menu].
 set shortmess+=c
 
+"Avoid mix urxvt-buffer when scrolling with the mouse
+set mouse=a
+
 "improve" the menu behavior
 set completeopt=menuone,noinsert,noselect
 
@@ -175,7 +178,6 @@ if filereadable(expand("~/.vim/bundle/coc.nvim/plugin/coc.vim"))
 endif
 
 "Maps
-
 let mapleader = " "
 
 nnoremap <leader>v :LLPStartPreview
