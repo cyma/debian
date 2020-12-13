@@ -1,4 +1,4 @@
-$\section{VIM}
+$\section{VIM}$
 
 Ready to go \textit{.vimrc} with \textit{autocomplete} \textbf{CoC} and \LaTeX{} support.
 
