@@ -19,13 +19,13 @@ for_window [class=".*"] border pixel 2
 for_window [class="^.*"] client.focused #77dd77 #285577 #ffffff #2e9ef4   #285577
 
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Hack 10
+font pango:hack 10
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock-fancy --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -67,7 +67,9 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec urxvtc
+# start firefox-esr
+bindsym $mod+f exec firefox-esr
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -118,21 +120,21 @@ bindsym $mod+o split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+s fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
+#bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+#bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+#bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+#bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -218,9 +220,11 @@ bar
         position top
 }
 
+#urxvt daemon
+exec urxvtd
 
 #power management
-exec --no-startup-id sleep 3 &amp;&amp; xfce4-power-manager
+#exec --no-startup-id sleep 3 &amp;&amp; xfce4-power-manager
 
 #lock
 bindsym $mod+shift+x exec i3lock-fancy
