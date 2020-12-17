@@ -5,12 +5,13 @@ URxvt.italicFont: xft:hack:italic:size=12
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 
-!disable scrollback buffer for secondary screen
-URxvt.secondaryScreen: 1
-URxvt.secondaryScroll: 0
-
 URxvt.scrollBar: false
 URxvt.loginShell: true
+Urxvt.scrollTyOutput: false
+Urxvt.scrollWithBuffer: false
+URxvt.skipScroll: true
+Urxvt.saveLines: 0
+
 
 ! Jellybeans colorscheme
 ! Generated with :
@@ -20,7 +21,8 @@ URxvt.loginShell: true
 *.background:  #121212
 *.cursorColor: #ffa560
 !
-! Black *.color0:      #929292
+! Black
+*.color0:      #929292
 *.color8:      #bdbdbd
 !
 ! Red
