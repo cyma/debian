@@ -217,7 +217,7 @@ let g:coc_global_extensions=[
 " Configuration for coc-bibtex
     call coc#config('list.source.bibtex', {
     \  'files': [
-    \    '~/.cyma/debian/LaTeX/article/sample.bib'
+    \    '~/.cymagit/LaTeX/article/sample.bib'
     \]
     \})
 
