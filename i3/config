@@ -223,19 +223,20 @@ bar
 }
 
 #urxvt daemon
-exec urxvtd
+exec --no-startup-id urxvtd
 
 #power management
 #exec --no-startup-id sleep 3 &amp;&amp; xfce4-power-manager
 
 #lock
 bindsym $mod+shift+x exec i3lock-fancy
+exec --no-startup-id xautolock -time 15 -locker "i3lock-fancy"
 
 #screenshot
 bindsym --release $mod+z exec scrot -s -e 'mv $f ~/Shots/'
 #Wallpaper
-exec_always feh --bg-scale ~/Pictures/wallpapers/gaga.png
+exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/gaga.png
 #Yandex
-exec yandex-disk start
+exec --no-startup-id yandex-disk start
 
 
