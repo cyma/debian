@@ -47,6 +47,19 @@ mode "$mode_display" {
 # Declare here the shortcut to bring the display selection menu
 bindsym $mod+x mode "$mode_display
 
+# Shots management
+set $mode_shot Screenshots: (c) coding, (d) dam, (l) linux, (r) random
+mode "$mode_shot" {
+    bindsym --release c exec --no-startup-id scrot -s -e 'mv $f ~/shots/coding', mode "default"
+    bindsym --release d exec --no-startup-id scrot -s -e 'mv $f ~/shots/dam', mode "default"
+    bindsym --release l exec --no-startup-id scrot -s -e 'mv $f ~/shots/linux', mode "default"
+    bindsym --release r exec --no-startup-id scrot -s -e 'mv $f ~/shots/random', mode "default"
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+z mode "$mode_shot
+
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -67,7 +80,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvtc
+bindsym $mod+Return exec --no-startup-id urxvtc
 bindsym $mod+s exec urxvt
 
 # kill focused window
@@ -232,8 +245,6 @@ exec --no-startup-id urxvtd
 bindsym $mod+shift+x exec i3lock-fancy
 exec --no-startup-id xautolock -time 15 -locker "i3lock-fancy"
 
-#screenshot
-bindsym --release $mod+z exec scrot -s -e 'mv $f ~/Shots/'
 #Wallpaper
 exec_always --no-startup-id feh --bg-scale ~/Pictures/wallpapers/gaga.png
 #Yandex
