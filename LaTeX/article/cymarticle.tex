@@ -1,12 +1,11 @@
-% File   : LaTeX template
+% File   : LaTeX template (article)
 % Author : cyma <cyma.deb@protonmail.ch>
 % Source : <https://github.com/cyma/debian>
 % License : MIT Copyright (c) 2020 cyma
 
 
-%-----------------------------------
+
 % PACKAGES AND CONFIGURATIONS
-%-----------------------------------
 
 \documentclass[a4paper,twoside,11pt]{article}
 \usepackage[utf8]{inputenc} %inputting international characters
@@ -31,6 +30,7 @@
 \usepackage{amsmath} % mathematical typesetting
 \usepackage{amssymb} % mathematical symbols
 \usepackage{mathrsfs} % \mathscr script font that is more elaborate than the ``calligraphic'' font obtained by \mathcal
+\usepackage{siunitx} % Provides the \SI{}{} and \si{} command for typesetting SI units
 \usepackage{relsize} % allow \mathlarger
 \usepackage{extarrows} % extra Arrows beyond those provided in amsmath
 \usepackage{mathtools} % enhance the appearance of documents containing a lot of mathematics
@@ -55,6 +55,8 @@
 
 \setlength{\parindent}{0pt} % remove indent
 
+%\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
 %\sloppy % rules to fix some line breaking
 %\fuzzy % default LaTeX rules
 %\date{}
@@ -64,28 +66,28 @@
 
 
 
-%-----------------------------------
-%           TITLE PAGE
-%-----------------------------------
+
+% TITLE
+
 
 \begin{titlepage}
  \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 	\center
 
-	%------------------------------------------------
-	%	Headings
-	%------------------------------------------------
 
-    \textsc{\LARGE \bf\textcolor{red}{Church of Emacs}}\\[1.5cm] % Main heading such as the name of your university/college
+	% Headings
 
-    \textsc{\Large \textcolor{red}{Vi IMproved}}\\[0.5cm] % Major heading such as course name
 
-	\textsc{\large The Grinch stole my Thinkpad}\\[0.5cm] % Minor heading such as course title
+    \textsc{\LARGE \bf\textcolor{red}{Church of Emacs}}\\[1.5cm] % university/college
 
-	%------------------------------------------------
-	%	Title
-	%------------------------------------------------
+    \textsc{\Large \textcolor{red}{Vi IMproved}}\\[0.5cm] % Course name
+
+	\textsc{\large A Murloc stole my Hook}\\[0.5cm] % Course title
+
+
+	% Title
+
 
 	\HRule\\[0.4cm]
 
@@ -93,9 +95,9 @@
 
 	\HRule\\[1.5cm]
 
-	%------------------------------------------------
-	%	Author(s)
-	%------------------------------------------------
+
+	%	Author
+
 
 	\begin{minipage}{0.4\textwidth}
 		\begin{flushleft}
@@ -117,18 +119,18 @@
 	%{\large\textit{Author}}\\
 	%The \textsc{Coconut} % Oil
 
-	%------------------------------------------------
-	%	Logo
-	%------------------------------------------------
+
+	% Logo
+
 
 	\vfill
 	\includegraphics[width=0.3\textwidth]{monster.png}\\[1cm] % Include a department/university logo.
 
 
 
-    %------------------------------------------------
-	%	Date
-	%------------------------------------------------
+
+	% Date
+
 
 	\vfill % Position the date 3/4 down the remaining page
 
@@ -141,9 +143,9 @@
 
 
 
-%-------------------------------------------------------------------------------
-%	     CONTENT - CHAPTERS
-%-------------------------------------------------------------------------------
+
+% CONTENT - CHAPTERS
+
 
 \pagenumbering{roman}
 
@@ -171,9 +173,9 @@
         \addtocontents{toc}{~\hfill\textbf{\small{Página}}\par} % add pages to toc
 \singlespacing
 
-%-------------------------------------------------------------------------------
-%                   PRE-SECTIONS
-%-------------------------------------------------------------------------------
+
+% PRE-SECTIONS
+
 
 \newpage
 
@@ -201,9 +203,9 @@
 \end{figure}
 
 
-%---------------------------------------------------------------------------------------
-%               BEGIN SECTIONS AREA
-%---------------------------------------------------------------------------------------
+
+% BEGIN SECTIONS AREA
+
 
 \newpage
 
@@ -302,9 +304,9 @@ Or just a plain footnote:
 
 \newpage
 
-%---------------
+
 %   REFERENCES
-%---------------
+
 %Add heading=bibintoc or subbibintoc to add in table of contents.
 
 %\printbibliography[type=article,title={Articles only}]

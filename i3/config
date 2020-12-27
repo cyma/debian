@@ -48,12 +48,13 @@ mode "$mode_display" {
 bindsym $mod+x mode "$mode_display
 
 # Shots management
-set $mode_shot Screenshots: (c) coding, (d) dam, (l) linux, (r) random
+set $mode_shot Screenshots: (c) coding, (d) dam, (l) linux, (r) random, (v) vim
 mode "$mode_shot" {
     bindsym --release c exec --no-startup-id scrot -s -e 'mv $f ~/shots/coding', mode "default"
     bindsym --release d exec --no-startup-id scrot -s -e 'mv $f ~/shots/dam', mode "default"
     bindsym --release l exec --no-startup-id scrot -s -e 'mv $f ~/shots/linux', mode "default"
     bindsym --release r exec --no-startup-id scrot -s -e 'mv $f ~/shots/random', mode "default"
+    bindsym --release v exec --no-startup-id scrot -s -e 'mv $f ~/shots/vim', mode "default"
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
