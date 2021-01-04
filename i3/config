@@ -33,7 +33,7 @@ exec --no-startup-id nm-applet
 
 ## Manual management of external displays
 # Set the shortcuts and what they do
-set $mode_display Ext Screen (e) eDP-1 ON, (d) DP-2-1 ON, (v) VGA ON, (h) HDMI ON, (x) VGA OFF, (y) HDMI OFF, (z) eDP-1 OFF, (t) DP-2-1 OFF
+set $mode_display Ext Screen (e) eDP-1 ON, (d) DP-2-1 ON, (x) eDP-1 OFF, (y) DP-2-1 OFF
 mode "$mode_display" {
     bindsym e exec --no-startup-id xrandr --output eDP-1 --auto --left-of DP-2-1, mode "default"
     bindsym d exec --no-startup-id xrandr --output DP-2-1 --auto --right-of eDP-1, mode "default"

@@ -1,7 +1,6 @@
 #!/bin/bash
 #VPN ported from i3status
 
-
 if [[ -d /proc/sys/net/ipv4/conf/tun0 ]]; then
     echo "VPN: ON"
     echo "VPN: ON"
