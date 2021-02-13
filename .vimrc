@@ -137,7 +137,7 @@ set updatetime=50
 set shortmess+=c
 
 "Avoid mix urxvt-buffer when scrolling with the mouse
-"set mouse=a
+set mouse=a
 
 "improve" the menu behavior
 set completeopt=menuone,noinsert,noselect
