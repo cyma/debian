@@ -7,10 +7,11 @@ URxvt.lineSpace: 0
 
 URxvt.scrollBar: false
 URxvt.loginShell: true
-Urxvt.scrollTyOutput: false
-Urxvt.scrollWithBuffer: false
+URxvt.scrollTyOutput: false
+URxvt.scrollWithBuffer: false
 URxvt.skipScroll: true
-Urxvt.saveLines: 0
+URxvt.saveLines: 1000;
+
 
 
 ! Jellybeans colorscheme
