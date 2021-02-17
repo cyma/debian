@@ -1,6 +1,6 @@
-URxvt.font: xft:hack:size=12
-URxvt.boldFont: xft:hack:bold:size=12
-URxvt.italicFont: xft:hack:italic:size=12
+URxvt.font: xft:hack:size=10
+URxvt.boldFont: xft:hack:bold:size=10
+URxvt.italicFont: xft:hack:italic:size=10
 
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
