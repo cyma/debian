@@ -44,7 +44,6 @@ runtime! macros/matchit.vim
 
 "Finishing Plugin Section
 
-
 "Begin eyecandy section"
 
 colorscheme  jellybeans
@@ -58,20 +57,19 @@ if (g:colors_name == 'jellybeans')
 endif
 
 "Add git branch from fugitive and set colorscheme for lightline
+
 if filereadable(expand("~/.vim/bundle/lightline.vim/plugin/lightline.vim"))
-    set noshowmode
-    let g:lightline = {
-        \ 'active': {
-        \   'left': [ [ 'mode', 'paste' ],
-        \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-        \ },
-        \ 'component_function': {
-        \   'gitbranch': 'FugitiveHead'
-        \ },
-        \ }
-    if(g:colors_name == 'jellybeans')
-        let g:lightline = {'colorscheme' : 'jellybeans'}
-    endif
+ set noshowmode
+ let g:lightline = {
+       \ 'colorscheme' : 'jellybeans',
+       \ 'active': {
+       \   'left': [ [ 'mode', 'paste' ],
+       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+       \ },
+       \ 'component_function': {
+       \   'gitbranch': 'fugitive#head',
+       \ },
+       \ }
 endif
 
 set background=dark
@@ -80,6 +78,7 @@ set background=dark
 if &t_Co == 8 && $TERM !~# '^Eterm'
   set t_Co=16
 endif
+
 
 "Finish eyecandy section
 
