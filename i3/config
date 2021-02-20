@@ -15,9 +15,6 @@ set $mod Mod4
 # no borders
 for_window [class=".*"] border pixel 2
 
-                          # class       border  backgr. text    indicator child_border
-for_window [class="^.*"] client.focused #77dd77 #285577 #ffffff #2e9ef4   #285577
-
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:hack 9
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
