@@ -28,12 +28,15 @@ Plugin 'vim-utils/vim-man'
 Plugin 'valloric/youcompleteme'
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
+"Plugin 'ervandew/supertab'
+
+"Plugin 'puremourning/vimspector'
+"Plugin 'szw/vim-maximizer'
 
 Plugin 'ap/vim-css-color'
 
 Plugin 'itchyny/lightline.vim'
 Plugin 'nanotech/jellybeans.vim'
-Plugin 'flazz/vim-colorschemes'
 Plugin 'cyma/neverland-vim-theme'
 Plugin 'morhetz/gruvbox'
 call vundle#end()
@@ -41,6 +44,7 @@ call vundle#end()
 filetype plugin indent on
 
 runtime! macros/matchit.vim
+
 
 "Finishing Plugin Section
 
@@ -59,17 +63,17 @@ endif
 "Add git branch from fugitive and set colorscheme for lightline
 
 if filereadable(expand("~/.vim/bundle/lightline.vim/plugin/lightline.vim"))
- set noshowmode
- let g:lightline = {
-       \ 'colorscheme' : 'jellybeans',
-       \ 'active': {
-       \   'left': [ [ 'mode', 'paste' ],
-       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-       \ },
-       \ 'component_function': {
-       \   'gitbranch': 'fugitive#head',
-       \ },
-       \ }
+    set noshowmode
+    let g:lightline = {
+           \ 'colorscheme' : 'jellybeans',
+           \ 'active': {
+           \   'left': [ [ 'mode', 'paste' ],
+           \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+           \ },
+           \ 'component_function': {
+           \   'gitbranch': 'fugitive#head',
+           \ },
+           \ }
 endif
 
 set background=dark
@@ -116,13 +120,15 @@ set undofile
 
 set incsearch
 set nohlsearch
-set smartcase
 set ignorecase
+set smartcase
 
-set scrolloff=8
+set scrolloff=10
+
 set signcolumn=yes
-set showmatch
+set colorcolumn=80
 
+set showmatch
 set noerrorbells
 
 "If a file has been modified outside of vim, automatically reads it again
@@ -139,11 +145,8 @@ set shortmess+=c
 "Avoid mix urxvt-buffer when scrolling with the mouse
 set mouse=a
 
-"improve" the menu behavior
-set completeopt=menuone,noinsert,noselect
-
 "Comment if terminal has support
-"set termguicolors
+
 if exists('+termguicolors')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
