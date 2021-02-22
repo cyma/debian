@@ -20,6 +20,7 @@ Plugin 'jremmen/vim-ripgrep'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mbbill/undotree'
 Plugin 'preservim/nerdtree'
+Plugin 'szw/vim-maximizer'
 
 Plugin 'lervag/vimtex'
 Plugin 'xuhdev/vim-latex-live-preview'
@@ -28,10 +29,6 @@ Plugin 'vim-utils/vim-man'
 Plugin 'valloric/youcompleteme'
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
-"Plugin 'ervandew/supertab'
-
-"Plugin 'puremourning/vimspector'
-"Plugin 'szw/vim-maximizer'
 
 Plugin 'ap/vim-css-color'
 
@@ -130,13 +127,14 @@ set colorcolumn=80
 
 set showmatch
 set noerrorbells
+set completeopt=menuone,noinsert,noselect
 
 "If a file has been modified outside of vim, automatically reads it again
 set autoread
 
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience. Increase in case latex-preview does not
-" preview correctly
+"Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+"delays and poor user experience. Increase in case latex-preview does not
+"preview correctly
 set updatetime=50
 
 "Don't pass messages to [ins-completion-menu].
@@ -145,7 +143,7 @@ set shortmess+=c
 "Avoid mix urxvt-buffer when scrolling with the mouse
 set mouse=a
 
-"Comment if terminal has support
+
 
 if exists('+termguicolors')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -176,14 +174,15 @@ let g:livepreview_previewer = 'zathura'
 let g:livepreview_engine = 'pdflatex'
 let g:livepreview_cursorhold_recompile = 0
 
-
 "Maps
+
 let mapleader = " "
 
 nnoremap <leader>v :LLPStartPreview
 
 nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
+
 
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
@@ -199,4 +198,10 @@ nnoremap <leader>p "+p
 vnoremap <leader>y "+y
 nnoremap <leader>y "+y
 nnoremap <leader>Y gg"+yG
+
+nnoremap <leader>m :MaximazerToggle!<CR>
+
+
+
+
 
