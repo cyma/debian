@@ -29,13 +29,14 @@ Plugin 'vim-utils/vim-man'
 Plugin 'valloric/youcompleteme'
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'java_getset.vim'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
-Plugin 'ap/vim-css-color'
-
-Plugin 'itchyny/lightline.vim'
 Plugin 'nanotech/jellybeans.vim'
-Plugin 'cyma/neverland-vim-theme'
 Plugin 'morhetz/gruvbox'
+Plugin 'cyma/neverland-vim-theme'
+Plugin 'ap/vim-css-color'
+Plugin 'itchyny/lightline.vim'
 call vundle#end()
 
 filetype plugin indent on
@@ -79,7 +80,6 @@ set background=dark
 if &t_Co == 8 && $TERM !~# '^Eterm'
   set t_Co=16
 endif
-
 
 "Finish eyecandy section
 
@@ -140,11 +140,10 @@ set updatetime=50
 "Don't pass messages to [ins-completion-menu].
 set shortmess+=c
 
-"Avoid mix urxvt-buffer when scrolling with the mouse
+"Don't show scrollback buffer from urxvt inside vim
 set mouse=a
 
-
-
+"True color
 if exists('+termguicolors')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -154,10 +153,10 @@ endif
 "Automatic delete trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
-" Return to last edit position when opening files
+"Return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-" YCM + Snips
+"YCM + Snips
 let g:UltiSnipsExpandTrigger="<c-j>"
 
 "Allow rg faster search
@@ -201,7 +200,5 @@ nnoremap <leader>Y gg"+yG
 
 nnoremap <leader>m :MaximazerToggle!<CR>
 
-
-
-
+vnoremap <leader>gs :InsertGetterSetter<CR>
 
