@@ -1,6 +1,6 @@
-URxvt.font: xft:hack:size=10
-URxvt.boldFont: xft:hack:bold:size=10
-URxvt.italicFont: xft:hack:italic:size=10
+URxvt.font: xft:hack:style=regular:pixelsize=14:antialias=true:autohint=true
+URxvt.boldFont: xft:hack:style=bold:pixelsize=14:antialias=true:autohint=true
+URxvt.italicFont: xft:hack:style=italic:pixelsize=14:antialias=true:autohint=true
 
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
@@ -11,8 +11,6 @@ URxvt.scrollTyOutput: false
 URxvt.scrollWithBuffer: false
 URxvt.skipScroll: true
 URxvt.saveLines: 1000;
-
-
 
 ! Jellybeans colorscheme
 ! Generated with :
