@@ -1,0 +1,73 @@
+general {
+        output_format = "i3bar"
+        colors = true
+        interval = 5
+}
+
+
+order += "tztime local"
+order += "tztime madrid"
+order += "volume master"
+order += "battery all"
+order += "cpu_usage"
+order += "ethernet enp0s25"
+order += "path_exists VPN"
+order += "wireless wlp3s0"
+
+
+tztime local {
+        format = "%Y-%m-%d %H:%M:%S"
+        hide_if_equals_localtime = true
+}
+
+tztime madrid {
+        format = "%Y-%m-%d %H:%M:%S %Z"
+        timezone = "Europe/Madrid"
+}
+
+volume master {
+        format = "VOL: %volume"
+        format_muted = "MUTED (%volume)"
+        device = "default"
+        mixer = "Master"
+        mixer_idx = 0
+}
+
+battery all {
+        format = "BAT: %percentage %remaining"
+        low_threshold = 10
+        integer_battery_capacity = "true"
+}
+
+cpu_usage{
+
+        format = "CPU: %usage"
+        degraded_threshold = "30"
+        format_above_degraded_threshold = " CPU : %usage"
+        max_threshold = "75"
+}
+
+
+
+path_exists VPN {
+        # path exists when a VPN tunnel launched by nmcli/nm-applet is active
+        path = "/proc/sys/net/ipv4/conf/tun0"
+}
+
+ethernet enp0s25 {
+        format_up = "E: %ip (%speed)"
+        format_down = ""
+}
+
+wireless wlp3s0 {
+        format_up = "W: %ip (%bitrate)"
+        format_down = "W: down"
+}
+
+memory {
+        format = "MEM: %used/%total"
+        threshold_degraded = "50%"
+        format_degraded = "MEMORY: %used/%total"
+        threshold_critical = "%10"
+
+}
