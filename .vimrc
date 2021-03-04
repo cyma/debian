@@ -140,6 +140,10 @@ set updatetime=50
 "Don't pass messages to [ins-completion-menu].
 set shortmess+=c
 
+"Make the vim tab name the current filename
+let &titlestring = @%
+set title
+
 "Don't show scrollback buffer from urxvt inside vim
 set mouse=a
 
@@ -188,9 +192,11 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
+nnoremap <C-t> :tabe<CR>
+nnoremap <leader>t :terminal<CR>
 
-nnoremap <leader>= :vertical resize +5<CR>
-nnoremap <leader>- :vertical resize -5<CR>
+nnoremap <silent> <leader>= :vertical resize +5<CR>
+nnoremap <silent> <leader>- :vertical resize -5<CR>
 
 
 nnoremap <leader>p "+p
