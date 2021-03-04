@@ -1,6 +1,6 @@
-URxvt.font: xft:hack:style=regular:pixelsize=14:antialias=true:autohint=true
-URxvt.boldFont: xft:hack:style=bold:pixelsize=14:antialias=true:autohint=true
-URxvt.italicFont: xft:hack:style=italic:pixelsize=14:antialias=true:autohint=true
+URxvt.font: xft:IBM Plex Mono:style=Regular:pixelsize=16
+URxvt.boldFont: xft:IBM Plex Mono:style=Bold:pixelsize=16
+URxvt.italicFont: xft:IBM Plex Mono:style=Italic:pixelsize=16
 
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
