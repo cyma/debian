@@ -16,6 +16,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-repeat'
 Plugin 'jremmen/vim-ripgrep'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mbbill/undotree'
@@ -26,6 +27,7 @@ Plugin 'lervag/vimtex'
 Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'vim-utils/vim-man'
 
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'valloric/youcompleteme'
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -192,8 +194,8 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
-nnoremap <C-t> :tabe<CR>
-nnoremap <leader>t :terminal<CR>
+nnoremap <leader>t :tabe<CR>
+nnoremap <leader>sh :terminal<CR>
 
 nnoremap <silent> <leader>= :vertical resize +5<CR>
 nnoremap <silent> <leader>- :vertical resize -5<CR>
@@ -204,7 +206,7 @@ vnoremap <leader>y "+y
 nnoremap <leader>y "+y
 nnoremap <leader>Y gg"+yG
 
-nnoremap <leader>m :MaximazerToggle!<CR>
+nnoremap <leader>m :MaximazerToggle<CR>
 
 vnoremap <leader>gs :InsertGetterSetter<CR>
 
