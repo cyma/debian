@@ -5,6 +5,7 @@ URxvt.italicFont: xft:IBM Plex Mono:style=Italic:pixelsize=16
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
 
+URxvt.pointerBlank: true
 URxvt.scrollBar: false
 URxvt.loginShell: true
 URxvt.scrollTyOutput: false
@@ -21,7 +22,7 @@ URxvt.saveLines: 1000;
 *.cursorColor: #ffa560
 !
 ! Black
-*.color0:      #929292
+*.color0:      #121212
 *.color8:      #bdbdbd
 !
 ! Red
