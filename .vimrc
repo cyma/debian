@@ -13,26 +13,27 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
 Plugin 'jremmen/vim-ripgrep'
-Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'junegunn/fzf.vim'
 Plugin 'mbbill/undotree'
 Plugin 'preservim/nerdtree'
 Plugin 'szw/vim-maximizer'
 
 Plugin 'lervag/vimtex'
 Plugin 'xuhdev/vim-latex-live-preview'
-Plugin 'vim-utils/vim-man'
 
-Plugin 'jiangmiao/auto-pairs'
 Plugin 'valloric/youcompleteme'
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'java_getset.vim'
 Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'vim-utils/vim-man'
 
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'morhetz/gruvbox'
@@ -136,13 +137,13 @@ set autoread
 
 "Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 "delays and poor user experience. Increase in case latex-preview does not
-"preview correctly
+"work correctly
 set updatetime=50
 
 "Don't pass messages to [ins-completion-menu].
 set shortmess+=c
 
-"Make the vim tab name the current filename
+"Make the vim tab name the current file
 let &titlestring = @%
 set title
 
@@ -166,12 +167,29 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 let g:UltiSnipsExpandTrigger="<c-j>"
 
 "Allow rg faster search
-if executable('rg')
-    let g:rg_derive_root='true'
-endif
+ if executable('rg')
+     let g:rg_derive_root='true'
+ endif
 
-"Ctrlp ignored items
-let g:ctrlp_user_command = ['.git/','git --git-dir=%s/.git ls-files -oc --exclude-standard']
+"FZF
+if filereadable(expand("~/.vim/bundle/fzf.vim/plugin/fzf.vim"))
+    let $FZF_DEFAULT_COMMAND='rg --files --hidden --follow --no-ignore-vcs'
+    let g:fzf_layout = {'down': '30%'}
+    let g:fzf_colors =
+    \ { 'fg':      ['fg', 'Normal'],
+      \ 'bg':      ['bg', 'Normal'],
+      \ 'hl':      ['fg', 'Comment'],
+      \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+      \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+      \ 'hl+':     ['fg', 'Statement'],
+      \ 'info':    ['fg', 'PreProc'],
+      \ 'border':  ['fg', 'Ignore'],
+      \ 'prompt':  ['fg', 'Conditional'],
+      \ 'pointer': ['fg', 'Exception'],
+      \ 'marker':  ['fg', 'Keyword'],
+      \ 'spinner': ['fg', 'Label'],
+      \ 'header':  ['fg', 'Comment'] }
+endif
 
 "LaTeX
 let g:tex_flavor='latex'
@@ -187,7 +205,9 @@ nnoremap <leader>v :LLPStartPreview
 
 nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
-
+nnoremap <leader>1 :silent update<Bar>silent !firefox %:p &<CR>
+nnoremap <leader>ff :Files<CR>
+nnoremap <leader>fg :Rg<CR>
 
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
