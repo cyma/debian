@@ -4,6 +4,9 @@ URxvt.italicFont: xft:IBM Plex Mono:style=Italic:pixelsize=16
 
 URxvt.letterSpace: 0
 URxvt.lineSpace: 0
+! URxvt.internalBorder: 0
+! URxvt.externalBorder: 0
+! URxvt.borderWidth: 0
 
 URxvt.pointerBlank: true
 URxvt.scrollBar: false
