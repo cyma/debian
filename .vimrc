@@ -30,7 +30,6 @@ Plugin 'szw/vim-maximizer'
 
 Plugin 'lervag/vimtex'
 Plugin 'xuhdev/vim-latex-live-preview'
-Plugin 'spf13/vim-preview'
 Plugin 'valloric/youcompleteme'
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
@@ -40,8 +39,8 @@ Plugin 'vim-utils/vim-man'
 
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'morhetz/gruvbox'
-Plugin 'cyma/neverland-vim-theme'
 Plugin 'ap/vim-css-color'
+Plugin 'kabbamine/vcoolor.vim'
 Plugin 'itchyny/lightline.vim'
 call vundle#end()
 
@@ -214,27 +213,22 @@ nnoremap <leader>v :LLPStartPreview
 
 nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
-nnoremap <leader>1 :Preview<CR>
+nnoremap <leader>.ht :!open %<CR>
+nnoremap <leader>.co :VCoolor<CR>
 nnoremap <leader>ff :Files<CR>
 
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>l :tabnext<CR>
+nnoremap <leader>h :tabprevious<CR>
 
 nnoremap <leader>t :tabe<CR>
 nnoremap <leader>sh :terminal<CR>
-
-nnoremap <silent> <leader>= :vertical resize +5<CR>
-nnoremap <silent> <leader>- :vertical resize -5<CR>
-
 
 nnoremap <leader>p "+p
 vnoremap <leader>y "+y
 nnoremap <leader>y "+y
 nnoremap <leader>Y gg"+yG
 
-nnoremap <leader>m :MaximazerToggle<CR>
+nnoremap <leader>m :MaximizerToggle<CR>
 
 vnoremap <leader>gs :InsertGetterSetter<CR>
 
