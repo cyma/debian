@@ -8,9 +8,9 @@
 static char *font = "IBM Plex Mono:pixelsize=16:antialias=true:autohint=true";
 
 /* disable bold, italic and roman fonts globally */
-int disablebold = 0;
-int disableitalic = 0;
-int disableroman = 0;
+int disablebold = 1;
+int disableitalic = 1;
+int disableroman = 1;
 
 static int borderpx = 2;
 
@@ -227,8 +227,8 @@ static Shortcut shortcuts[] = {
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ TERMMOD,              XK_Return,      newterm,        {.i =  0} },
-	{ ControlMask,          XK_k,           kscrollup,      {.i = -1} },
-	{ ControlMask,          XK_j,           kscrolldown,    {.i = -1} },
+	{ ControlMask,          XK_Page_Up,     kscrollup,      {.i = -1} },
+	{ ControlMask,          XK_Page_Down,   kscrolldown,    {.i = -1} },
 };
 
 /*
