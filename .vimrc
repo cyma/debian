@@ -9,7 +9,6 @@ filetype off
 "Don't let polyglot mess with tabs
 let g:polyglot_disabled=['autoindent']
 
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'VundleVim/Vundle.vim'
@@ -23,6 +22,7 @@ Plug 'tpope/vim-repeat'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'universal-ctags/ctags'
 Plug 'airblade/vim-rooter'
 
 Plug 'mbbill/undotree'
@@ -36,10 +36,10 @@ Plug 'honza/vim-snippets'
 Plug 'scrooloose/syntastic'
 Plug 'sheerun/vim-polyglot'
 Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'lervag/vimtex'
-Plug 'xuhdev/vim-latex-live-preview'
 Plug 'vim-utils/vim-man'
 "Plug 'vimwiki/vimwiki'
+Plug 'lervag/vimtex'
+Plug 'xuhdev/vim-latex-live-preview'
 
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'nanotech/jellybeans.vim'
@@ -54,23 +54,20 @@ filetype plugin indent on
 
 runtime! macros/matchit.vim
 
-
 "Finishing Plugin Section
-
-"Begin eyecandy section"
 
 "Add git branch from fugitive and set colorscheme for lightline
 
 set noshowmode
 let g:lightline = {
-       \ 'active': {
-       \   'left': [ [ 'mode', 'paste' ],
-       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-       \ },
-       \ 'component_function': {
-       \   'gitbranch': 'fugitive#head',
-       \ },
-       \ }
+   \ 'active': {
+   \   'left': [ [ 'mode', 'paste' ],
+   \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+   \ },
+   \ 'component_function': {
+   \   'gitbranch': 'fugitive#head',
+   \ },
+   \ }
 
 "Colorschemes
 if($TERM == "st-256color")
@@ -96,13 +93,6 @@ if(g:colors_name == 'gruvbox')
 endif
 
 set background=dark
-
-" Allow color schemes to do bright colors without forcing bold.
-if &t_Co == 8 && $TERM !~# '^Eterm'
-    set t_Co=16
-endif
-
-"Finish eyecandy section
 
 "Ready to go settings
 set encoding=utf-8
@@ -180,7 +170,6 @@ let g:syntastic_java_checkers = []
 if executable('rg')
   let g:rg_derive_root='true'
 endif
-
 
 "FZF
 let $FZF_DEFAULT_COMMAND='rg --files --hidden'
