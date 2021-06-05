@@ -5,13 +5,12 @@
 ### Dependencies
 ###### System basics
 ```bash
-sudo apt-get install build-essentials manpages-dev git curl net-tools
+sudo apt-get install build-essential manpages-dev git curl net-tools
 ```
 ###### Security
 ```bash
 sudo apt-get install firewalld fail2ban aide nmap macchanger openvpn mat2
 ```
-Firewalld can be configured in GUI with package firewall-config
 ```bash
 sudo firewall-cmd --permanent --zone=public --change-interface="Interface"
 ```
@@ -34,25 +33,25 @@ sudo apt-get install tmux libevent-dev libncurses-dev
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
+#### Other
 ###### Utilities
 ```bash
 sudo apt-get install lm-sensors acpi zathura mutt firefox-esr feh pulseaudio
 ```
-###### Other
-Debian devel:
-```bash
-sudo apt-get install cmake python3-dev dh-make devscripts fakeroot lintian
-```
-Science:
-```bash
-sudo apt-get install wxmaxima octave texlive-full latexmk
-```
-File manager:
+###### File manager
 ```bash
 sudo apt-get install ranger atool caca-utils mediainfo highlight
 ```
+###### Debian
+```bash
+sudo apt-get install cmake python3-dev dh-make devscripts fakeroot lintian
+```
+###### Science:
+```bash
+sudo apt-get install wxmaxima octave texlive-full latexmk
+```
 
-#### Suckless patches applied
+### Suckless patches applied
 | Patch               | Tool  | Description                                         |
 | ------------------- | ----- | --------------------------------------------------- |
 | always-center       | dwm   | All floating windows are centered                   |
@@ -75,7 +74,7 @@ sudo apt-get install ranger atool caca-utils mediainfo highlight
 | dwmlogo             | slock | Draws the dwm logo                                  |
 
 # TODO-LIST
-- Volume keys integration.
+- Volume keys integration with pulseaudio.
 - Dependencies package.
 - Vimspector support in C++.
 - ssh, fail2ban config.
