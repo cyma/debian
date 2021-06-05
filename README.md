@@ -36,7 +36,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 #### Other
 ###### Utilities
 ```bash
-sudo apt-get install lm-sensors acpi zathura mutt firefox-esr feh pulseaudio
+sudo apt-get install lm-sensors acpi zathura mutt firefox-esr feh pulseaudio alsa-utils
 ```
 ###### File manager
 ```bash

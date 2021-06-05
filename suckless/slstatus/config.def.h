@@ -69,9 +69,10 @@ static const struct arg args[] = {
   { keyboard_indicators, "  <%s>  ", "c?"},
   //{ keymap, "%s  ", NULL},
 	{ datetime, "%s  ",           "%F %T" },
+  { run_command, "VOL: %s  ", "amixer sget Master | awk -F\"[][]\" ' /%/ { print $2 }' | head -n1"},
   { cpu_perc, "CPU: %s %%  ",  NULL},
   { ram_used, "RAM: %s  ", NULL},
   { ipv4, "IPv4: %s ", "interface"},
-  { run_command, " %s  ", "$PATH_TO_vpn_status"},
+  { run_command, " %s  ", "if [[ -d /proc/sys/net/ipv4/conf/tun0 ]]; then echo 'VPN: ON'; else echo 'VPN: OFF'; fi"},
   //{ battery_perc, "BAT: %s %% ", "BAT1"},
 };
