@@ -57,6 +57,12 @@ sudo apt-get install lm-sensors acpi zathura mutt firefox-esr feh pulseaudio als
 ```bash
 sudo apt-get install vifm atool caca-utils mediainfo highlight poppler-utils w3m
 ```
+```bash
+rm -rf ~/.config/vifm/colors
+```
+```bash
+git clone https://github.com/vifm/vifm-colors ~/.config/vifm/colors
+```
 
 ###### Debian
 
