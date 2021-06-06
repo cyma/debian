@@ -3,18 +3,24 @@
 
 
 ### Dependencies
-###### System basics
+
+###### Basics
+
 ```bash
 sudo apt-get install build-essential manpages-dev git curl net-tools
 ```
+
 ###### Security
+
 ```bash
 sudo apt-get install firewalld fail2ban aide nmap macchanger openvpn mat2
 ```
 ```bash
 sudo firewall-cmd --permanent --zone=public --change-interface="Interface"
 ```
+
 ###### Vim
+
 ```bash
 sudo apt-get install vim-gtk ripgrep fzf universal-ctags
 ```
@@ -22,34 +28,48 @@ sudo apt-get install vim-gtk ripgrep fzf universal-ctags
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
+
 ###### Suckless
+
 ```bash
 sudo apt-get install libxft2 libxft-dev x11-xserver-utils xorg xserver-xorg-dev libxinerama-dev libxrandr-dev
 ```
+
 ###### Tmux
+
 ```bash
 sudo apt-get install tmux libevent-dev libncurses-dev
 ```
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
+
 #### Other
+
 ###### Utilities
+
 ```bash
-sudo apt-get install lm-sensors acpi zathura mutt firefox-esr feh pulseaudio alsa-utils
+sudo apt-get install lm-sensors acpi zathura mutt firefox-esr feh pulseaudio alsa-utils vlc
 ```
+
 ###### File manager
+
 ```bash
-sudo apt-get install ranger atool caca-utils mediainfo highlight
+sudo apt-get install vifm atool caca-utils mediainfo highlight poppler-utils w3m
 ```
+
 ###### Debian
+
 ```bash
 sudo apt-get install cmake python3-dev dh-make devscripts fakeroot lintian
 ```
+
 ###### Science:
+
 ```bash
 sudo apt-get install wxmaxima octave texlive-full latexmk
 ```
+
 
 ### Suckless patches applied
 | Patch               | Tool  | Description                                         |
@@ -74,8 +94,7 @@ sudo apt-get install wxmaxima octave texlive-full latexmk
 | dwmlogo             | slock | Draws the dwm logo                                  |
 
 # TODO-LIST
-- Volume keys integration with pulseaudio.
-- Dependencies package.
 - Vimspector support in C++.
 - ssh, fail2ban config.
 - Macchanger boot service.
+- Dependencies package/script.
