@@ -207,8 +207,6 @@ nnoremap <leader>tag :TagbarToggle<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>.ht :!open %<CR>
-nnoremap <leader>.co :VCoolor<CR>
-nnoremap <leader>ff :Files<CR>
 
 nnoremap <leader>l :tabnext<CR>
 nnoremap <leader>h :tabprevious<CR>
@@ -222,4 +220,3 @@ nnoremap <leader>y "+y
 nnoremap <leader>Y gg"+yG
 
 nnoremap <leader>m :MaximizerToggle<CR>
-
