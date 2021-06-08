@@ -11,13 +11,12 @@ let g:polyglot_disabled=['autoindent']
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'VundleVim/Vundle.vim'
-
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
-"Plug 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
+"Plug 'tpope/vim-projectionist'
 
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -37,7 +36,6 @@ Plug 'scrooloose/syntastic'
 Plug 'sheerun/vim-polyglot'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-utils/vim-man'
-"Plug 'vimwiki/vimwiki'
 Plug 'lervag/vimtex'
 Plug 'xuhdev/vim-latex-live-preview'
 
@@ -47,12 +45,9 @@ Plug 'morhetz/gruvbox'
 
 Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-css-color'
-Plug 'kabbamine/vcoolor.vim'
 call plug#end()
 
 filetype plugin indent on
-
-runtime! macros/matchit.vim
 
 "Finishing Plugin Section
 
@@ -152,7 +147,7 @@ set shortmess+=c
 let &titlestring = @%
 set title
 
-"Don't show scrollback buffer from urxvt inside vim
+"Enable mouse in all modes
 set mouse=a
 
 "Automatic delete trailing whitespace on save
