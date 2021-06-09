@@ -4,7 +4,7 @@
 # Check sudo privileges
 if [[ "${UID}" -ne 0 ]]
 then
-  echo 'Permission denied. Run again with sudo privileges'
+  echo 'Permission denied. Run again with sudo privileges' >&2
   exit 1
 fi
 
@@ -42,7 +42,7 @@ enable_service()
   if [[ ( "${USER_CONFIRMATION}" != "y" )  && (( "${USER_CONFIRMATION}" != "Y" )) ]]
   then
     echo 'Operation canceled'
-    return 1
+    exit 1
   else
     # Enable service
     echo "changemac@${INTERFACE_NAME}.service"

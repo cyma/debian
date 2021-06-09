@@ -116,5 +116,5 @@ fi
 if [ -n "$DISPLAY" ]
 then
   xset b off
-  xset r rate 150 30
+  xset r rate 200 30
 fi
