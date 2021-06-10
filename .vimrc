@@ -25,7 +25,7 @@ Plug 'universal-ctags/ctags'
 Plug 'airblade/vim-rooter'
 
 Plug 'mbbill/undotree'
-Plug 'preservim/nerdtree'
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'szw/vim-maximizer'
 Plug 'majutsushi/tagbar'
 
@@ -36,8 +36,8 @@ Plug 'scrooloose/syntastic'
 Plug 'sheerun/vim-polyglot'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-utils/vim-man'
-Plug 'lervag/vimtex'
-Plug 'xuhdev/vim-latex-live-preview'
+Plug 'lervag/vimtex', { 'for': ['latex', 'tex'] }
+Plug 'xuhdev/vim-latex-live-preview', { 'for': ['latex', 'text'], 'on': 'LLPStartPreview' }
 
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'nanotech/jellybeans.vim'
@@ -71,7 +71,7 @@ if($TERM == "st-256color")
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
     set termguicolors
 else
-    colorscheme gruvbox
+    colorscheme jellybeans
 endif
 
 if(g:colors_name == 'tokyonight')
@@ -85,6 +85,10 @@ if(g:colors_name == 'gruvbox')
     let g:lightline.colorscheme = 'gruvbox'
     let g:gruvbox_italic = '0'
     let g:gruvbox_invert_selection = '0'
+endif
+
+if(g:colors_name == 'jellybeans')
+  let g:lightline.colorscheme = 'jellybeans'
 endif
 
 set background=dark
@@ -207,10 +211,10 @@ nnoremap <leader>tag :TagbarToggle<CR>
 nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>.ht :!open %<CR>
+nnoremap <leader>ff :Files<CR>
 
 nnoremap <leader>l :tabnext<CR>
 nnoremap <leader>h :tabprevious<CR>
-
 nnoremap <leader>t :tabe<CR>
 nnoremap <leader>sh :terminal<CR>
 
