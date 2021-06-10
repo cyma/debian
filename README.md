@@ -7,7 +7,7 @@
 ###### Basics
 
 ```bash
-sudo apt-get install build-essential manpages-dev git curl net-tools
+sudo apt-get install build-essential cmake python3-dev manpages-dev git curl net-tools
 ```
 
 ###### Security
@@ -64,17 +64,26 @@ rm -rf ~/.config/vifm/colors
 git clone https://github.com/vifm/vifm-colors ~/.config/vifm/colors
 ```
 
-###### Debian
+###### Packages
 
 ```bash
-sudo apt-get install cmake python3-dev dh-make devscripts fakeroot lintian
+sudo apt-get install dh-make devscripts fakeroot lintian
 ```
 
-###### Science:
+###### LaTeX
 
 ```bash
-sudo apt-get install wxmaxima octave texlive-full latexmk
+sudo apt-get install texlive texlive-science texlive-pictures texlive-latex-extra \
+  texlive-lang-english texlive-lang-spanish texlive-bibtex-extra texlive-publishers \
+  texlive-font-utils latexmk
 ```
+
+###### Science
+
+```bash
+sudo apt-get install wxmaxima octave openbabel-gui xdraw-chem avogadro
+```
+
 
 
 ### Suckless patches applied
@@ -100,7 +109,6 @@ sudo apt-get install wxmaxima octave texlive-full latexmk
 | dwmlogo             | slock | Draws the dwm logo                                  |
 
 # TODO-LIST
-- Vimspector support in C++.
+- Vimspector C++ .json script.
 - ssh, fail2ban config.
-- Macchanger boot service.
-- Dependencies package/script.
+- Dependencies package.
