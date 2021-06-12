@@ -81,7 +81,7 @@ sudo apt-get install texlive texlive-science texlive-pictures texlive-latex-extr
 ###### Science
 
 ```bash
-sudo apt-get install wxmaxima octave openbabel-gui xdraw-chem avogadro
+sudo apt-get install wxmaxima octave openbabel-gui xdrawchem avogadro
 ```
 
 
