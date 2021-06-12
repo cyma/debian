@@ -42,7 +42,7 @@ enable_service()
   if [[ ( "${USER_CONFIRMATION}" != "y" )  && (( "${USER_CONFIRMATION}" != "Y" )) ]]
   then
     echo 'Operation canceled'
-    exit 1
+    exit 0
   else
     # Enable service
     echo "changemac@${INTERFACE_NAME}.service"
@@ -60,7 +60,7 @@ then
   read -p 'File already exists. Select option: ' MENU_OPTION
   case "${MENU_OPTION}" in
     1)
-      exit 1
+      exit 0
       ;;
     2)
       enable_service
