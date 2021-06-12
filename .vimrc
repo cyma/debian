@@ -39,9 +39,9 @@ Plug 'vim-utils/vim-man'
 Plug 'lervag/vimtex', { 'for': ['latex', 'tex'] }
 Plug 'xuhdev/vim-latex-live-preview', { 'for': ['latex', 'text'], 'on': 'LLPStartPreview' }
 
-Plug 'ghifarit53/tokyonight-vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'morhetz/gruvbox'
+Plug 'ghifarit53/tokyonight-vim'
 
 Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-css-color'
@@ -55,23 +55,35 @@ filetype plugin indent on
 
 set noshowmode
 let g:lightline = {
-   \ 'active': {
-   \   'left': [ [ 'mode', 'paste' ],
-   \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-   \ },
-   \ 'component_function': {
-   \   'gitbranch': 'fugitive#head',
-   \ },
-   \ }
+  \ 'active': {
+  \   'left': [ [ 'mode', 'paste' ],
+  \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+  \ },
+  \ 'component_function': {
+  \   'gitbranch': 'fugitive#head',
+  \ },
+  \ }
 
 "Colorschemes
 if($TERM == "st-256color")
-    colorscheme tokyonight
+    colorscheme jellybeans
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
     set termguicolors
 else
-    colorscheme jellybeans
+    colorscheme gruvbox
+endif
+
+if(g:colors_name == 'jellybeans')
+  let g:lightline.colorscheme = 'jellybeans'
+  let g:jellybeans_use_gui_italics = 0
+endif
+
+if(g:colors_name == 'gruvbox')
+  let g:gruvbox_contrast_dark = 'hard'
+  let g:lightline.colorscheme = 'gruvbox'
+  let g:gruvbox_italic = '0'
+  let g:gruvbox_invert_selection = '0'
 endif
 
 if(g:colors_name == 'tokyonight')
@@ -79,19 +91,6 @@ if(g:colors_name == 'tokyonight')
   let g:tokyonight_enable_italic = '0'
   let g:tokyonight_disable_italic_comment = '1'
 endif
-
-if(g:colors_name == 'gruvbox')
-    let g:gruvbox_contrast_dark = 'hard'
-    let g:lightline.colorscheme = 'gruvbox'
-    let g:gruvbox_italic = '0'
-    let g:gruvbox_invert_selection = '0'
-endif
-
-if(g:colors_name == 'jellybeans')
-  let g:lightline.colorscheme = 'jellybeans'
-endif
-
-set background=dark
 
 "Ready to go settings
 set encoding=utf-8
@@ -175,8 +174,8 @@ let $FZF_DEFAULT_COMMAND='rg --files --hidden'
 let $FZF_DEFAULT_OPTS = '--info=inline'
 let g:fzf_tags_command = 'ctags -R'
 let g:fzf_layout = {'down': '40%'}
-let g:fzf_colors =
-  \ { 'fg':      ['fg', 'Normal'],
+let g:fzf_colors = {
+    \ 'fg':      ['fg', 'Normal'],
     \ 'bg':      ['bg', 'Normal'],
     \ 'hl':      ['fg', 'Comment'],
     \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],

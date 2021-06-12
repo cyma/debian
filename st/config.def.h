@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "IBM Plex Mono:pixelsize=16:antialias=true:autohint=true";
+static char *font = "IBM Plex Mono:pixelsize=14:antialias=true:autohint=true";
 
 /* disable bold, italic and roman fonts globally */
 int disablebold = 1;
@@ -109,52 +109,51 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 8;
+unsigned int tabspaces = 2;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 
-	/* 8 normal colors */
-    "#1a1b26",
-    "#F7768E",
-    "#9ECE6A",
-    "#E0AF68",
-    "#7AA2f7",
-    "#9a7ecc",
-    "#4abaaf",
-    "#acb0d0",
+    /* Jellybeans 8 normal colors */
+    "#929292",
+    "#e27373",
+    "#94b979",
+    "#ffba7b",
+    "#97bedc",
+    "#e1c0fa",
+    "#00988e",
+    "#dedede",
 
-    /* 8 bright colors */
-    "#4e5173",
-    "#F7768E",
-    "#9ECE6A",
-    "#E0AF68",
-    "#7AA2f7",
-    "#9a7ecc",
-    "#4abaaf",
-    "#acb0d0",
+    /* Jellybeans 8 bright colors */
+    "#bdbdbd",
+    "#ffa1a1",
+    "#bddeab",
+    "#ffdca0",
+    "#b1d8f6",
+    "#fbdaff",
+    "#1ab2a8",
+    "#ffffff",
+
 	  [255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#cccccc",
 	"#555555",
-  "#0f111b",
-  "#ecf0c1",
-  "#1a1b26", /* Background */
-  "#a9b1d6", /* Foreground */
-  "#a9b1d6", /* Cursor */
 
-
+  /* background */
+  "#151515",
+  /* cursor */
+  "#ffa560",
 };
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 261;
-unsigned int defaultbg = 260;
-static unsigned int defaultcs = 262;
-static unsigned int defaultrcs = 262;
+unsigned int defaultfg = 15;
+unsigned int defaultbg = 258;
+static unsigned int defaultcs = 259;
+static unsigned int defaultrcs = 257;
 
 /*
  * Default shape of cursor
@@ -176,7 +175,7 @@ static unsigned int rows = 24;
  * Default colour and shape of the mouse cursor
  */
 static unsigned int mouseshape = XC_xterm;
-static unsigned int mousefg = 7;
+static unsigned int mousefg = 259;
 static unsigned int mousebg = 0;
 
 /*
