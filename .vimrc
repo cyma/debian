@@ -203,6 +203,20 @@ let g:livepreview_cursorhold_recompile = 0
 
 let mapleader = " "
 
+" Jumps to its definition
+nnoremap <leader>gt :YcmCompleter GoTo<CR>
+" Echoes type of the variable
+nnoremap <leader>typ :YcmCompleter GetType<CR>
+" Find all references within the project
+nnoremap <leader>ref :YcmCompleter GoToReferences<CR>
+" Looks up the current line for a header and jumps to it
+nnoremap <leader>inc :YcmCompleter GoToInclude<CR>
+" Displays the preview window populated with quick info about the identifier
+nnoremap <leader>doc :YcmCompleter GetDoc<CR>
+" Semantic rename of the identifier under the cursor
+nnoremap <leader>rn :YcmCompleter RefactorRename
+" Correct diagnostics on the current line
+nnoremap <leader>fix :YcmCompleter FixIt<CR>
 nnoremap <leader>v :LLPStartPreview
 
 nnoremap <leader>tag :TagbarToggle<CR>
