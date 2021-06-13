@@ -217,6 +217,8 @@ nnoremap <leader>doc :YcmCompleter GetDoc<CR>
 nnoremap <leader>rn :YcmCompleter RefactorRename
 " Correct diagnostics on the current line
 nnoremap <leader>fix :YcmCompleter FixIt<CR>
+
+
 nnoremap <leader>v :LLPStartPreview
 
 nnoremap <leader>tag :TagbarToggle<CR>
