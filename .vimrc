@@ -15,7 +15,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
-Plug 'jiangmiao/auto-pairs'
 "Plug 'tpope/vim-projectionist'
 
 Plug 'jremmen/vim-ripgrep'
@@ -217,7 +216,6 @@ nnoremap <leader>doc :YcmCompleter GetDoc<CR>
 nnoremap <leader>rn :YcmCompleter RefactorRename
 " Correct diagnostics on the current line
 nnoremap <leader>fix :YcmCompleter FixIt<CR>
-
 
 nnoremap <leader>v :LLPStartPreview
 

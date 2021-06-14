@@ -22,7 +22,7 @@ sudo firewall-cmd --permanent --zone=public --change-interface="Interface"
 ###### Vim
 
 ```bash
-sudo apt-get install vim-gtk ripgrep fzf universal-ctags
+sudo apt-get install vim-nox ripgrep fzf universal-ctags
 ```
 ```bash
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -111,4 +111,3 @@ sudo apt-get install wxmaxima octave openbabel-gui xdrawchem avogadro
 # TODO-LIST
 - Vimspector C++ .json script.
 - ssh, fail2ban config.
-- Dependencies package.
