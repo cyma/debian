@@ -22,7 +22,7 @@ static int borderpx = 2;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/bin/bash";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
@@ -226,8 +226,8 @@ static Shortcut shortcuts[] = {
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ TERMMOD,              XK_Return,      newterm,        {.i =  0} },
-	{ ControlMask,          XK_Page_Up,     kscrollup,      {.i = -1} },
-	{ ControlMask,          XK_Page_Down,   kscrolldown,    {.i = -1} },
+	{ ControlMask,          XK_k,           kscrollup,      {.i = -1} },
+	{ ControlMask,          XK_j,           kscrolldown,    {.i = -1} },
 };
 
 /*
