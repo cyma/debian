@@ -115,44 +115,41 @@ unsigned int tabspaces = 2;
 static const char *colorname[] = {
 
     /* Jellybeans 8 normal colors */
-    "#929292",
-    "#e27373",
-    "#94b979",
-    "#ffba7b",
-    "#97bedc",
-    "#e1c0fa",
-    "#00988e",
-    "#dedede",
-
+    "#1a1b26",
+    "#F7768E",
+    "#9ECE6A",
+    "#E0AF68",
+    "#7AA2f7",
+    "#9a7ecc",
+    "#4abaaf",
+    "#acb0d0",
     /* Jellybeans 8 bright colors */
-    "#bdbdbd",
-    "#ffa1a1",
-    "#bddeab",
-    "#ffdca0",
-    "#b1d8f6",
-    "#fbdaff",
-    "#1ab2a8",
-    "#ffffff",
+    "#4e5173",
+    "#F7768E",
+    "#9ECE6A",
+    "#E0AF68",
+    "#7AA2f7",
+    "#9a7ecc",
+    "#4abaaf",
+    "#acb0d0",
 
-	  [255] = 0,
+    [255] = 0,
 
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#cccccc",
 	"#555555",
 
-  /* background */
-  "#151515",
-  /* cursor */
-  "#ffa560",
+    /* foreground-cursor */
+    "#a9b1d6",
 };
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 7;
-unsigned int defaultbg = 258;
-static unsigned int defaultcs = 256;
+unsigned int defaultfg = 258;
+unsigned int defaultbg = 0;
+static unsigned int defaultcs = 258;
 static unsigned int defaultrcs = 257;
 
 /*

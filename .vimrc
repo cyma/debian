@@ -11,11 +11,12 @@ let g:polyglot_disabled=['autoindent']
 
 call plug#begin('~/.vim/plugged')
 
+"Plug 'tpope/vim-projectionist'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
-"Plug 'tpope/vim-projectionist'
+Plug 'jiangmiao/auto-pairs'
 
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -65,7 +66,7 @@ let g:lightline = {
 
 "Colorschemes
 if($TERM == "st-256color")
-    colorscheme jellybeans
+    colorscheme tokyonight
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
     set termguicolors
@@ -91,6 +92,8 @@ if(g:colors_name == 'tokyonight')
   let g:tokyonight_disable_italic_comment = '1'
 endif
 
+set background=dark
+
 "Ready to go settings
 set encoding=utf-8
 
@@ -99,9 +102,9 @@ set number
 
 set smartindent
 
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 set expandtab
 set hidden
 
@@ -132,7 +135,7 @@ set colorcolumn=79
 
 set showmatch
 set noerrorbells
-set completeopt=menuone,noinsert,noselect
+"set completeopt=menuone,noinsert,noselect
 
 "If a file has been modified outside of vim, automatically reads it again
 set autoread
