@@ -8,11 +8,11 @@
 static char *font = "IBM Plex Mono:pixelsize=14:antialias=true:autohint=true";
 
 /* disable bold, italic and roman fonts globally */
-int disablebold = 1;
-int disableitalic = 1;
-int disableroman = 1;
+int disablebold = 0;
+int disableitalic = 0;
+int disableroman = 0;
 
-static int borderpx = 2;
+static int borderpx = 0;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -109,29 +109,29 @@ char *termname = "st-256color";
  *
  *	stty tabs
  */
-unsigned int tabspaces = 2;
+unsigned int tabspaces = 4;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 
     /* Jellybeans 8 normal colors */
-    "#1a1b26",
-    "#F7768E",
-    "#9ECE6A",
-    "#E0AF68",
-    "#7AA2f7",
-    "#9a7ecc",
-    "#4abaaf",
-    "#acb0d0",
+    "#121212",
+    "#e27373",
+    "#94b979",
+    "#ffba7b",
+    "#97bedc",
+    "#e1c0fa",
+    "#00988e",
+    "#dedede",
     /* Jellybeans 8 bright colors */
-    "#4e5173",
-    "#F7768E",
-    "#9ECE6A",
-    "#E0AF68",
-    "#7AA2f7",
-    "#9a7ecc",
-    "#4abaaf",
-    "#acb0d0",
+    "#bdbdbd",
+    "#e27373",
+    "#94b979",
+    "#ffba7b",
+    "#97bedc",
+    "#e1c0fa",
+    "#00988e",
+    "#dedede",
 
     [255] = 0,
 
@@ -139,18 +139,16 @@ static const char *colorname[] = {
 	"#cccccc",
 	"#555555",
 
-    /* foreground-cursor */
-    "#a9b1d6",
 };
 
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 258;
+unsigned int defaultfg = 15;
 unsigned int defaultbg = 0;
-static unsigned int defaultcs = 258;
-static unsigned int defaultrcs = 257;
+static unsigned int defaultcs = 4;
+static unsigned int defaultrcs = 15;
 
 /*
  * Default shape of cursor

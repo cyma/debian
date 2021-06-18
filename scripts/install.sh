@@ -9,13 +9,13 @@ then
 fi
 
 # Basics
-BASICS_LIST="build-essential manpages-dev cmake python3-dev git curl net-tools"
+BASICS_LIST="build-essential manpages-dev cmake python3-dev git curl net-tools rxvt-unicode"
 
 # Security
-SECURITY_LIST="firewalld macchanger fail2ban aide nmap openvpn mat2"
+SECURITY_LIST="firewalld macchanger fail2ban aide watchdog nmap openvpn mat2"
 
 # Vim
-VIM_LIST="vim-nox ripgrep fzf universal-ctags"
+VIM_LIST="vim-gtk ripgrep fzf universal-ctags"
 
 # Suckless
 SUCK_LIST="libxft2 libxft-dev x11-xserver-utils xorg xserver-xorg-dev \

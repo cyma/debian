@@ -7,13 +7,13 @@
 ###### Basics
 
 ```bash
-sudo apt-get install build-essential cmake python3-dev manpages-dev git curl net-tools
+sudo apt-get install build-essential cmake clangd python3-dev manpages-dev git curl net-tools rxvt-unicode
 ```
 
 ###### Security
 
 ```bash
-sudo apt-get install firewalld fail2ban aide nmap macchanger openvpn mat2
+sudo apt-get install firewalld fail2ban aide watchdog nmap macchanger openvpn mat2
 ```
 ```bash
 sudo firewall-cmd --permanent --zone=public --change-interface="Interface"
@@ -22,7 +22,7 @@ sudo firewall-cmd --permanent --zone=public --change-interface="Interface"
 ###### Vim
 
 ```bash
-sudo apt-get install vim-nox ripgrep fzf universal-ctags
+sudo apt-get install vim-gtk ripgrep fzf universal-ctags
 ```
 ```bash
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
