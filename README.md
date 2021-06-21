@@ -22,7 +22,7 @@ sudo firewall-cmd --permanent --zone=public --change-interface="Interface"
 ###### Vim
 
 ```bash
-sudo apt-get install vim-gtk ripgrep fzf universal-ctags
+sudo apt-get install vim-gtk ripgrep fzf universal-ctags nodejs npm
 ```
 ```bash
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \

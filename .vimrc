@@ -29,7 +29,7 @@ Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'szw/vim-maximizer'
 Plug 'majutsushi/tagbar'
 
-Plug 'valloric/youcompleteme'
+Plug 'neoclide/coc.nvim'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'scrooloose/syntastic'
@@ -66,12 +66,12 @@ let g:lightline = {
 
 "Colorschemes
 if($TERM == "st-256color")
-    colorscheme tokyonight
+    colorscheme jellybeans
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
     set termguicolors
 else
-    colorscheme gruvbox
+    colorscheme jellybeans
 endif
 
 if(g:colors_name == 'jellybeans')
@@ -135,7 +135,6 @@ set colorcolumn=79
 
 set showmatch
 set noerrorbells
-"set completeopt=menuone,noinsert,noselect
 
 "If a file has been modified outside of vim, automatically reads it again
 set autoread
@@ -161,10 +160,11 @@ autocmd BufWritePre * %s/\s\+$//e
 "Return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-"YCM + Snips
-let g:UltiSnipsExpandTrigger="<c-j>"
-"YCM fix conflict with syntastic in Java files
-let g:syntastic_java_checkers = []
+"Snips
+let g:UltiSnipsExpandTrigger="<C-j>"
+
+"Coc extensions
+let g:coc_global_extensions = ['coc-clangd', 'coc-cmake', 'coc-python', 'coc-sh', 'coc-vimtex']
 
 "Allow rg faster search
 if executable('rg')
@@ -205,21 +205,6 @@ let g:livepreview_cursorhold_recompile = 0
 
 let mapleader = " "
 
-" Jumps to its definition
-nnoremap <leader>gt :YcmCompleter GoTo<CR>
-" Echoes type of the variable
-nnoremap <leader>typ :YcmCompleter GetType<CR>
-" Find all references within the project
-nnoremap <leader>ref :YcmCompleter GoToReferences<CR>
-" Looks up the current line for a header and jumps to it
-nnoremap <leader>inc :YcmCompleter GoToInclude<CR>
-" Displays the preview window populated with quick info about the identifier
-nnoremap <leader>doc :YcmCompleter GetDoc<CR>
-" Semantic rename of the identifier under the cursor
-nnoremap <leader>rn :YcmCompleter RefactorRename
-" Correct diagnostics on the current line
-nnoremap <leader>fix :YcmCompleter FixIt<CR>
-
 nnoremap <leader>v :LLPStartPreview
 
 nnoremap <leader>tag :TagbarToggle<CR>
@@ -240,3 +225,63 @@ nnoremap <leader>y "+y
 nnoremap <leader>Y gg"+yG
 
 nnoremap <leader>m :MaximizerToggle<CR>
+
+" Conquer of Completion
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation.
+nmap <silent> <leader>def <Plug>(coc-definition)
+nmap <silent> <leader>typ <Plug>(coc-type-definition)
+nmap <silent> <leader>imp <Plug>(coc-implementation)
+nmap <silent> <leader>ref <Plug>(coc-references)
+
+" Apply AutoFix to problem on the current line
+nmap <leader>fix <Plug>(coc-fix-current)
+
+" Show documentation in preview window.
+nnoremap <silent> <leader>doc :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
