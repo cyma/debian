@@ -22,7 +22,7 @@ static int borderpx = 0;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/bash";
+static char *shell = "/bin/sh";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
@@ -115,7 +115,7 @@ unsigned int tabspaces = 4;
 static const char *colorname[] = {
 
     /* Jellybeans 8 normal colors */
-    "#121212",
+    "#151515",
     "#e27373",
     "#94b979",
     "#ffba7b",
@@ -193,13 +193,11 @@ static uint forcemousemod = ShiftMask;
 const unsigned int mousescrollincrement = 20;
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
-	{ XK_ANY_MOD,           Button4, kscrollup,      {.i = mousescrollincrement},      0, /* !alt */ -1 },
-	{ XK_ANY_MOD,           Button5, kscrolldown,    {.i = mousescrollincrement},      0, /* !alt */ -1 },
+	{ ShiftMask,            Button4, kscrollup,      {.i = mousescrollincrement} },
+	{ ShiftMask,            Button5, kscrolldown,    {.i = mousescrollincrement} },
 	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
 	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
-	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
 	{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} },
-	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
 };
 
 /* Internal keyboard shortcuts. */

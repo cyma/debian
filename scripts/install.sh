@@ -25,7 +25,7 @@ SUCK_LIST="libxft2 libxft-dev x11-xserver-utils xorg xserver-xorg-dev \
 TMUX_LIST="tmux libevent-dev libncurses-dev"
 
 # Utilities
-UTIL_LIST="lm-sensors acpi zathura mutt firefox-esr feh pulseaudio alsa-utils vlc"
+UTIL_LIST="lm-sensors acpi zathura mutt firefox-esr feh pulseaudio alsa-utils vlc audacity"
 
 # File manager
 FM_LIST="vifm atool caca-utils mediainfo highlight poppler-utils w3m"
