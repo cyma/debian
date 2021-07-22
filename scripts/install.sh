@@ -12,7 +12,7 @@ fi
 BASICS_LIST="build-essential manpages-dev cmake python3-dev git curl net-tools rxvt-unicode"
 
 # Security
-SECURITY_LIST="firewalld macchanger fail2ban aide watchdog nmap openvpn mat2"
+SECURITY_LIST="firewalld firewall-config macchanger fail2ban aide watchdog nmap openvpn mat2"
 
 # Vim
 VIM_LIST="vim-gtk ripgrep fzf universal-ctags"
@@ -25,13 +25,13 @@ SUCK_LIST="libxft2 libxft-dev x11-xserver-utils xorg xserver-xorg-dev \
 TMUX_LIST="tmux libevent-dev libncurses-dev"
 
 # Utilities
-UTIL_LIST="lm-sensors acpi zathura mutt firefox-esr feh pulseaudio alsa-utils vlc audacity"
+UTIL_LIST="lm-sensors acpi zathura libreoffice mutt firefox-esr feh pulseaudio alsa-utils vlc audacity"
 
 # File manager
-FM_LIST="vifm atool caca-utils mediainfo highlight poppler-utils w3m"
+FM_LIST="vifm atool caca-utils mediainfo highlight poppler-utils w3m w3m-img imagemagick"
 
 # Packages
-PACK_LIST="dh-make devscripts fakeroot lintian"
+PACK_LIST="dh-make devscripts fakeroot lintian dia"
 
 # LaTeX
 TEX_LIST="texlive texlive-science texlive-pictures texlive-latex-extra \
@@ -40,6 +40,9 @@ TEX_LIST="texlive texlive-science texlive-pictures texlive-latex-extra \
 
 # Science
 SCI_LIST="wxmaxima octave openbabel-gui xdrawchem avogadro"
+
+# Godot
+GODOT_LIST="godot3"
 
 update_upgrade()
 {
@@ -70,5 +73,5 @@ firewall_config()
 # Run
 update_upgrade
 sudo apt-get install -y ${BASICS_LIST} ${SECURITY_LIST} ${VIM_LIST} ${SUCK_LIST} \
-  ${TMUX_LIST} ${UTIL_LIST} ${FM_LIST} ${PACK_LIST} ${TEX_LIST} ${SCI_LIST}
+  ${TMUX_LIST} ${UTIL_LIST} ${FM_LIST} ${PACK_LIST} ${TEX_LIST} ${SCI_LIST} ${GODOT_LIST}
 firewall_config

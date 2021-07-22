@@ -13,7 +13,7 @@ sudo apt-get install build-essential cmake clangd python3-dev manpages-dev git c
 ###### Security
 
 ```bash
-sudo apt-get install firewalld fail2ban aide watchdog nmap macchanger openvpn mat2
+sudo apt-get install firewalld firewall-config fail2ban aide watchdog nmap macchanger openvpn mat2
 ```
 ```bash
 sudo firewall-cmd --permanent --zone=public --change-interface="Interface"
@@ -49,13 +49,13 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ###### Utilities
 
 ```bash
-sudo apt-get install lm-sensors acpi zathura mutt firefox-esr feh pulseaudio alsa-utils vlc audacity
+sudo apt-get install lm-sensors acpi libreoffice zathura mutt firefox-esr feh pulseaudio alsa-utils vlc audacity
 ```
 
 ###### File manager
 
 ```bash
-sudo apt-get install vifm atool caca-utils mediainfo highlight poppler-utils w3m
+sudo apt-get install vifm atool caca-utils mediainfo highlight poppler-utils w3m w3m-img imagemagick
 ```
 ```bash
 rm -rf ~/.config/vifm/colors
@@ -67,7 +67,7 @@ git clone https://github.com/vifm/vifm-colors ~/.config/vifm/colors
 ###### Packages
 
 ```bash
-sudo apt-get install dh-make devscripts fakeroot lintian
+sudo apt-get install dh-make devscripts fakeroot lintian dia
 ```
 
 ###### LaTeX
@@ -83,6 +83,15 @@ sudo apt-get install texlive texlive-science texlive-pictures texlive-latex-extr
 ```bash
 sudo apt-get install wxmaxima octave openbabel-gui xdrawchem avogadro
 ```
+
+##### Godot
+```bash
+sudo apt-get install godot3
+```
+Godot with vim:
+1. editor settings / external
+2. Exec Path: $PathToTerminalEmulator
+3. Exec Flags: -- /usr/bin/vim "+call cursor({line}, {col})" {file}
 
 
 
