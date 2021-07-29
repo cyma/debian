@@ -13,11 +13,18 @@ sudo apt-get install build-essential cmake clangd python3-dev manpages-dev git c
 ###### Security
 
 ```bash
-sudo apt-get install firewalld firewall-config fail2ban aide watchdog nmap macchanger openvpn mat2
+sudo apt-get install firewalld firewall-config fail2ban aide exim4 watchdog nmap macchanger openvpn mat2
 ```
 ```bash
 sudo firewall-cmd --permanent --zone=public --change-interface="Interface"
 ```
+```bash
+sudo aideinit
+```
+```bash
+sudo cp /var/lib/aide.db.new /var/lib/aide.db
+```
+Aide post-install not included in scripts. Depending on CPU performance, process could take long.
 
 ###### Vim
 
@@ -49,7 +56,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ###### Utilities
 
 ```bash
-sudo apt-get install lm-sensors acpi libreoffice zathura mutt firefox-esr feh pulseaudio alsa-utils vlc audacity
+sudo apt-get install lm-sensors acpi acpid libreoffice zathura mutt firefox-esr feh pulseaudio alsa-utils vlc audacity figlet
 ```
 
 ###### File manager

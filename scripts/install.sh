@@ -12,7 +12,7 @@ fi
 BASICS_LIST="build-essential manpages-dev cmake python3-dev git curl net-tools rxvt-unicode"
 
 # Security
-SECURITY_LIST="firewalld firewall-config macchanger fail2ban aide watchdog nmap openvpn mat2"
+SECURITY_LIST="firewalld firewall-config macchanger fail2ban aide exim4 watchdog nmap openvpn mat2"
 
 # Vim
 VIM_LIST="vim-gtk ripgrep fzf universal-ctags"
@@ -25,7 +25,7 @@ SUCK_LIST="libxft2 libxft-dev x11-xserver-utils xorg xserver-xorg-dev \
 TMUX_LIST="tmux libevent-dev libncurses-dev"
 
 # Utilities
-UTIL_LIST="lm-sensors acpi zathura libreoffice mutt firefox-esr feh pulseaudio alsa-utils vlc audacity"
+UTIL_LIST="lm-sensors acpi acpid zathura libreoffice mutt firefox-esr feh pulseaudio alsa-utils vlc audacity figlet"
 
 # File manager
 FM_LIST="vifm atool caca-utils mediainfo highlight poppler-utils w3m w3m-img imagemagick"
