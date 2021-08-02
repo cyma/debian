@@ -13,7 +13,7 @@ sudo apt-get install build-essential cmake clangd python3-dev manpages-dev git c
 ###### Security
 
 ```bash
-sudo apt-get install firewalld firewall-config fail2ban aide exim4 watchdog nmap macchanger openvpn mat2
+sudo apt-get install debsecan apt-listbugs apt-listchanges firewalld firewall-config fail2ban aide exim4 watchdog nmap macchanger openvpn mat2
 ```
 ```bash
 sudo firewall-cmd --permanent --zone=public --change-interface="Interface"

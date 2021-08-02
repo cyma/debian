@@ -12,7 +12,7 @@ fi
 BASICS_LIST="build-essential manpages-dev cmake python3-dev git curl net-tools rxvt-unicode"
 
 # Security
-SECURITY_LIST="firewalld firewall-config macchanger fail2ban aide exim4 watchdog nmap openvpn mat2"
+SECURITY_LIST="debsecan apt-listchanges apt-listbugs firewalld firewall-config macchanger fail2ban aide exim4 watchdog nmap openvpn mat2"
 
 # Vim
 VIM_LIST="vim-gtk ripgrep fzf universal-ctags"
