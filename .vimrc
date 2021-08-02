@@ -22,12 +22,12 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'universal-ctags/ctags'
+Plug 'majutsushi/tagbar'
+Plug 'vifm/vifm.vim'
 Plug 'airblade/vim-rooter'
 
 Plug 'mbbill/undotree'
-Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'szw/vim-maximizer'
-Plug 'majutsushi/tagbar'
 
 Plug 'neoclide/coc.nvim'
 Plug 'sirver/ultisnips'
@@ -37,7 +37,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-utils/vim-man'
 Plug 'lervag/vimtex', { 'for': ['latex', 'tex'] }
-Plug 'xuhdev/vim-latex-live-preview', { 'for': ['latex', 'text'], 'on': 'LLPStartPreview' }
+Plug 'xuhdev/vim-latex-live-preview', { 'for': ['latex', 'tex'], 'on': 'LLPStartPreview' }
+Plug 'habamax/vim-godot'
 
 Plug 'nanotech/jellybeans.vim'
 Plug 'morhetz/gruvbox'
@@ -154,6 +155,9 @@ set title
 "Enable mouse in all modes
 set mouse=a
 
+"Removes the menu bar (gVim -> godot)
+:set guioptions -=T
+
 "Automatic delete trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
@@ -210,7 +214,6 @@ nnoremap <leader>v :LLPStartPreview
 nnoremap <leader>tag :TagbarToggle<CR>
 
 nnoremap <leader>u :UndotreeToggle<CR>
-nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>.ht :!open %<CR>
 nnoremap <leader>ff :Files<CR>
 
@@ -281,7 +284,7 @@ function! s:show_documentation()
 endfunction
 
 " Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
+"autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
