@@ -9,7 +9,7 @@ then
 fi
 
 # Basics
-BASICS_LIST="build-essential manpages-dev cmake python3-dev git curl net-tools rxvt-unicode"
+BASICS_LIST="build-essential desktop-base firmware-linux-nonfree firmware-misc-nonfree manpages-dev cmake python3-dev git curl net-tools rxvt-unicode"
 
 # Security
 SECURITY_LIST="gnome-keyring seahorse debsecan apt-listchanges apt-listbugs resolvconf firewalld firewall-config macchanger fail2ban aide exim4 watchdog nmap openvpn mat2"
