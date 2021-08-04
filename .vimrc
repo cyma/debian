@@ -18,18 +18,17 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'jiangmiao/auto-pairs'
 
-Plug 'jremmen/vim-ripgrep'
+Plug 'yegappan/grep'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'universal-ctags/ctags'
 Plug 'majutsushi/tagbar'
 Plug 'vifm/vifm.vim'
 Plug 'airblade/vim-rooter'
-
 Plug 'mbbill/undotree'
 Plug 'szw/vim-maximizer'
 
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'scrooloose/syntastic'
