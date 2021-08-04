@@ -1,7 +1,8 @@
-URxvt.font: xft:IBM Plex Mono:pixelsize=14:antialias=true:autohint=true
-URxvt.boldFont: xft:IBM Plex Mono:bold:pixelsize=14:anialias=true:autohint=true
+URxvt.font: xft:IBM Plex Mono:style=Regular:pixelsize=14:antialias=true:autohint=true, xft:Monospace:style=Regular:pixelsize=14:antialias=true:autohint=true
+URxvt.boldFont: xft:IBM Plex Mono:style=Bold:pixelsize=14:anialias=true:autohint=true, xft:Monospace:style=Bold:pixelsize=14:antialias=true:autohint=true
 
-URxvt.letterSpace: 0
+
+URxvt.letterSpace: -1
 URxvt.lineSpace: 0
 URxvt.internalBorder: 0
 URxvt.externalBorder: 0
