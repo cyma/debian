@@ -13,7 +13,7 @@ sudo apt-get install build-essential cmake clangd python3-dev manpages-dev git c
 ###### Security
 
 ```bash
-sudo apt-get install debsecan apt-listbugs apt-listchanges firewalld firewall-config fail2ban aide exim4 watchdog nmap macchanger openvpn mat2
+sudo apt-get install gnome-keyring seahorse debsecan apt-listbugs apt-listchanges resolvconf firewalld firewall-config fail2ban aide exim4 watchdog nmap macchanger openvpn mat2
 ```
 ```bash
 sudo firewall-cmd --permanent --zone=public --change-interface="Interface"
@@ -81,7 +81,7 @@ sudo apt-get install dh-make devscripts fakeroot lintian dia
 
 ```bash
 sudo apt-get install texlive texlive-science texlive-pictures texlive-latex-extra \
-  texlive-lang-english texlive-lang-spanish texlive-bibtex-extra texlive-publishers \
+  texlive-lang-english texlive-lang-spanish texlive-bibtex-extra \
   texlive-font-utils latexmk
 ```
 

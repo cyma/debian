@@ -12,7 +12,7 @@ fi
 BASICS_LIST="build-essential manpages-dev cmake python3-dev git curl net-tools rxvt-unicode"
 
 # Security
-SECURITY_LIST="debsecan apt-listchanges apt-listbugs firewalld firewall-config macchanger fail2ban aide exim4 watchdog nmap openvpn mat2"
+SECURITY_LIST="gnome-keyring seahorse debsecan apt-listchanges apt-listbugs resolvconf firewalld firewall-config macchanger fail2ban aide exim4 watchdog nmap openvpn mat2"
 
 # Vim
 VIM_LIST="vim-gtk ripgrep fzf universal-ctags"
@@ -36,7 +36,7 @@ PACK_LIST="dh-make devscripts fakeroot lintian dia"
 # LaTeX
 TEX_LIST="texlive texlive-science texlive-pictures texlive-latex-extra \
           texlive-lang-english texlive-lang-spanish texlive-bibtex-extra \
-          texlive-publishers texlive-font-utils latexmk"
+          texlive-font-utils latexmk"
 
 # Science
 SCI_LIST="wxmaxima octave openbabel-gui xdrawchem avogadro"
