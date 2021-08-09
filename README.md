@@ -9,6 +9,7 @@
 ```bash
 sudo apt-get install build-essential desktop-base firmware-misc-nonfree firmware-linux-nonfree cmake clangd python3-dev manpages-dev git curl net-tools rxvt-unicode
 ```
+Non-free firmware not included in installation script.
 
 ###### Security
 
@@ -24,7 +25,7 @@ sudo aideinit
 ```bash
 sudo cp /var/lib/aide.db.new /var/lib/aide.db
 ```
-Aide post-install not included in scripts. Depending on CPU performance, process could take long.
+Aide not included in installation script. Depending on CPU performance, process could take long.
 
 ###### Vim
 
@@ -56,7 +57,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ###### Utilities
 
 ```bash
-sudo apt-get install lm-sensors acpi acpid libreoffice zathura mutt firefox-esr feh pulseaudio alsa-utils vlc audacity figlet
+sudo apt-get install calcurse lm-sensors acpi acpid libreoffice zathura mutt firefox-esr feh pulseaudio alsa-utils vlc audacity figlet
 ```
 
 ###### File manager
@@ -90,6 +91,7 @@ sudo apt-get install texlive texlive-science texlive-pictures texlive-latex-extr
 ```bash
 sudo apt-get install wxmaxima octave openbabel-gui xdrawchem avogadro
 ```
+Chemistry related packages (openbabel, xdrawchem and avogadro) not included in installation script.
 
 ##### Godot
 ```bash
@@ -124,5 +126,6 @@ Godot with vim:
 | dwmlogo             | slock | Draws the dwm logo                                  |
 
 # TODO-LIST
-- Vimspector C++ .json script.
+- Vim debug C++ configuration/maps.
 - ssh, fail2ban config.
+- mutt proton-bridge configuration.

@@ -8,6 +8,13 @@ vim_post()
 {
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+  if [[ -d '~/.vim/undodir' ]]
+  then
+      echo 'undodir directory already exists'
+  else
+      mkdir ~/.vim/undodir
+  fi
 }
 
 # Tmux post-install (Plugin Manager)
