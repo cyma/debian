@@ -7,6 +7,8 @@ URxvt.lineSpace: 0
 URxvt.internalBorder: 0
 URxvt.externalBorder: 0
 
+URxvt.cursorBlink: true
+URxvt.cursorUnderline: true
 URxvt.pointerBlank: true
 URxvt.scrollBar: false
 URxvt.loginShell: true
@@ -15,7 +17,6 @@ URxvt.scrollWithBuffer: false
 URxvt.skipScroll: true
 URxvt.saveLines: 1024
 URxvt.fading: 50
-
 
 ! Jellybeans
 !
