@@ -101,5 +101,5 @@ firewall_config()
 
 # Run
 update_upgrade
-install_packages
+#install_packages
 firewall_config
