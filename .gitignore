@@ -52,12 +52,12 @@ Mkfile.old
 dkms.conf
 
 # C
-../suckless/dmenu/config.h
-../suckless/dmenu/dmenu
-../suckless/dmenu/stest
-../suckless/dwm/config.h
-../suckless/dwm/dwm
-../suckless/slock/config.h
-../suckless/slock/slock
-../suckless/slstatus/config.h
-../suckless/slstatus/slstatus
+suckless/dmenu/config.h
+suckless/dmenu/dmenu
+suckless/dmenu/stest
+suckless/dwm/config.h
+suckless/dwm/dwm
+suckless/slock/config.h
+suckless/slock/slock
+suckless/slstatus/config.h
+suckless/slstatus/slstatus
