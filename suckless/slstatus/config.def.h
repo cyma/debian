@@ -71,6 +71,7 @@ static const struct arg args[] = {
   { datetime, "%s  ",           "%F %T" },
   { run_command, "VOL: %s  ", "amixer sget Master | awk -F\"[][]\" ' /%/ { print $2 }' | head -n1"},
   { cpu_perc, "CPU: %s %%  ",  NULL},
+  { temp, "TEMP: %s º C  ", "/sys/class/thermal/thermal_zone1/temp" },
   { ram_used, "RAM: %s  ", NULL},
   { ipv4, "IPv4: %s ", "wlp3s0"},
   { run_command, " %s  ", "if [[ -d /proc/sys/net/ipv4/conf/tun0 ]]; then echo 'VPN: ON'; else echo 'VPN: OFF'; fi"},
