@@ -16,7 +16,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
-Plug 'jiangmiao/auto-pairs'
+Plug 'raimondi/delimitmate'
 
 Plug 'yegappan/grep'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
