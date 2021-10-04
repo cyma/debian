@@ -64,6 +64,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont,
 static const char *termcmd[]  = { "urxvtc", NULL };
 static const char *slockcmd[] = { "slock", NULL};
 static const char *term2cmd[] = { "st", NULL };
+static const char *capture[]  = { "scrot", "-s", "-e", "mv $f ~/Pictures/shots/", NULL};
 
 #include "movestack.c"
 static Key keys[] = {
@@ -71,6 +72,7 @@ static Key keys[] = {
     { 0,              XF86XK_AudioLowerVolume, spawn,          {.v = downvol } },
 	{ 0,              XF86XK_AudioMute,        spawn,          {.v = mutevol } },
 	{ 0,              XF86XK_AudioRaiseVolume, spawn,          {.v = upvol   } },
+    { MODKEY|ShiftMask,             XK_z,      spawn,          {.v = capture } },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
     { MODKEY,                       XK_s,      spawn,          {.v = term2cmd} },

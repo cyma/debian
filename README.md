@@ -57,7 +57,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ###### Utilities
 
 ```bash
-sudo apt-get install calcurse lm-sensors acpi acpid libreoffice zathura mutt firefox-esr feh pulseaudio alsa-utils vlc audacity figlet
+sudo apt-get install calcurse lm-sensors acpi acpid libreoffice zathura mutt firefox-esr feh pulseaudio alsa-utils vlc audacity figlet scrot
 ```
 
 ###### File manager
