@@ -9,7 +9,7 @@ then
 fi
 
 # Basics
-BASICS_LIST="build-essential desktop-base manpages-dev cmake clangd python3-dev git curl net-tools rxvt-unicode"
+BASICS_LIST="build-essential desktop-base manpages-dev cmake clangd python3-dev default-jdk mono-complete git curl net-tools rxvt-unicode"
 # firmware-misc-nonfree and firmware-linux-nonfree removed, install manually.
 
 # Security
@@ -76,7 +76,7 @@ firewall_config()
     echo ''
     read -p "Configure firewalld [Y/n] " CONFIGURE_FIREWALLD
     echo "${CONFIGURE_FIREWALLD}"
-    if [[ ( "${USER_CONFIRMATION}" == "y" )  && (( "${USER_CONFIRMATION}" == "Y" )) ]]
+    if [[ ( "${CONFIGURE_FIREWALLD}" == "y" )  ||  (( "${USER_CONFIRMATION}" == "Y" )) ]]
     then
         echo "Enable firewalld interface"
         # Show available interfaces
@@ -101,5 +101,5 @@ firewall_config()
 
 # Run
 update_upgrade
-#install_packages
+install_packages
 firewall_config

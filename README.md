@@ -7,7 +7,7 @@
 ###### Basics
 
 ```bash
-sudo apt-get install build-essential desktop-base firmware-misc-nonfree firmware-linux-nonfree cmake clangd python3-dev manpages-dev git curl net-tools rxvt-unicode
+sudo apt-get install build-essential desktop-base firmware-misc-nonfree firmware-linux-nonfree cmake clangd python3-dev default-jdk mono-complete manpages-dev git curl net-tools rxvt-unicode
 ```
 Non-free firmware not included in installation script.
 

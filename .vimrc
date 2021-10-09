@@ -167,7 +167,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 let g:UltiSnipsExpandTrigger="<C-j>"
 
 "Coc extensions
-let g:coc_global_extensions = ['coc-clangd', 'coc-cmake', 'coc-python', 'coc-sh', 'coc-vimtex']
+let g:coc_global_extensions = ['coc-clangd', 'coc-cmake', 'coc-sh', 'coc-vimtex', 'coc-java', 'coc-sql']
 
 "Allow rg faster search
 if executable('rg')
