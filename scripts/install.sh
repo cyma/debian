@@ -13,7 +13,8 @@ BASICS_LIST="build-essential desktop-base manpages-dev cmake clangd python3-dev 
 # firmware-misc-nonfree and firmware-linux-nonfree removed, install manually.
 
 # Security
-SECURITY_LIST="gnome-keyring seahorse debsecan apt-listchanges apt-listbugs resolvconf firewalld firewall-config macchanger fail2ban exim4 watchdog nmap openvpn mat2"
+SECURITY_LIST="gnome-keyring seahorse debsecan apt-listchanges apt-listbugs resolvconf firewalld firewall-config macchanger fail2ban exim4 watchdog nmap openvpn mat2 debsums lynis
+needrestart libpam-tmpdir auditd sysstat clamav arp-scan samhain aircrack-ng hydra"
 # Aide removed, install manually.
 
 # Vim

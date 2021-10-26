@@ -14,7 +14,8 @@ Non-free firmware not included in installation script.
 ###### Security
 
 ```bash
-sudo apt-get install gnome-keyring seahorse debsecan apt-listbugs apt-listchanges resolvconf firewalld firewall-config fail2ban aide exim4 watchdog nmap macchanger openvpn mat2
+sudo apt-get install gnome-keyring seahorse debsecan apt-listbugs apt-listchanges resolvconf firewalld firewall-config fail2ban aide exim4 watchdog nmap macchanger openvpn mat2 debsums
+lynis needrestart libpam-tmpdir auditd sysstat clamav arp-scan samhain aircrack-ng hydra
 ```
 ```bash
 sudo firewall-cmd --permanent --zone=public --change-interface="Interface"
