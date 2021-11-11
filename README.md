@@ -8,6 +8,7 @@
 
 ```bash
 sudo apt-get install build-essential desktop-base firmware-misc-nonfree firmware-linux-nonfree cmake clangd python3-dev default-jdk mono-complete manpages-dev git curl net-tools rxvt-unicode
+mariadb-server mariadb-client libmariadb-java
 ```
 Non-free firmware not included in installation script.
 
@@ -15,7 +16,7 @@ Non-free firmware not included in installation script.
 
 ```bash
 sudo apt-get install gnome-keyring seahorse debsecan apt-listbugs apt-listchanges resolvconf firewalld firewall-config fail2ban aide exim4 watchdog nmap macchanger openvpn mat2 debsums
-lynis needrestart libpam-tmpdir auditd sysstat clamav arp-scan samhain aircrack-ng hydra
+lynis needrestart libpam-tmpdir auditd sysstat clamav arp-scan aircrack-ng hydra
 ```
 ```bash
 sudo firewall-cmd --permanent --zone=public --change-interface="Interface"
@@ -90,7 +91,7 @@ sudo apt-get install texlive texlive-science texlive-pictures texlive-latex-extr
 ###### Science
 
 ```bash
-sudo apt-get install wxmaxima octave openbabel-gui xdrawchem avogadro
+sudo apt-get install octave openbabel-gui xdrawchem avogadro
 ```
 Chemistry related packages (openbabel, xdrawchem and avogadro) not included in installation script.
 
