@@ -17,6 +17,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'raimondi/delimitmate'
+Plug 'vimwiki/vimwiki'
 
 Plug 'yegappan/grep'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -34,6 +35,7 @@ Plug 'honza/vim-snippets'
 Plug 'scrooloose/syntastic'
 Plug 'sheerun/vim-polyglot'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'uiiaoo/java-syntax.vim'
 Plug 'vim-utils/vim-man'
 Plug 'lervag/vimtex', { 'for': ['latex', 'tex'] }
 Plug 'xuhdev/vim-latex-live-preview', { 'for': ['latex', 'tex'], 'on': 'LLPStartPreview' }
@@ -42,6 +44,7 @@ Plug 'habamax/vim-godot'
 Plug 'nanotech/jellybeans.vim'
 Plug 'morhetz/gruvbox'
 Plug 'ghifarit53/tokyonight-vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 Plug 'itchyny/lightline.vim'
 Plug 'ap/vim-css-color'
@@ -91,6 +94,13 @@ if(g:colors_name == 'tokyonight')
   let g:tokyonight_enable_italic = '0'
   let g:tokyonight_disable_italic_comment = '1'
 endif
+
+if(g:colors_name == 'dracula')
+    let g:dracula_bold = 1
+    let g:dracula_italic = 1
+    let g:lightline.colorscheme ='dracula'
+endif
+
 
 set background=dark
 
@@ -151,8 +161,8 @@ set shortmess+=c
 let &titlestring = @%
 set title
 
-"Enable mouse in all modes
-set mouse=a
+"Disable mouse in all modes
+set mouse=
 
 "Removes the menu bar (gVim -> godot)
 :set guioptions -=T
@@ -165,6 +175,15 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 "Snips
 let g:UltiSnipsExpandTrigger="<C-j>"
+
+"Synstastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 "Coc extensions
 let g:coc_global_extensions = ['coc-clangd', 'coc-cmake', 'coc-sh', 'coc-vimtex', 'coc-java', 'coc-sql']
