@@ -95,10 +95,12 @@ if(g:colors_name == 'tokyonight')
   let g:tokyonight_disable_italic_comment = '1'
 endif
 
+
 if(g:colors_name == 'dracula')
     let g:dracula_bold = 1
-    let g:dracula_italic = 1
+    let g:dracula_italic = 0
     let g:lightline.colorscheme ='dracula'
+    "hi Normal guibg=#24242C
 endif
 
 
@@ -186,7 +188,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 "Coc extensions
-let g:coc_global_extensions = ['coc-clangd', 'coc-cmake', 'coc-sh', 'coc-vimtex', 'coc-java', 'coc-sql']
+let g:coc_global_extensions = ['coc-clangd', 'coc-cmake', 'coc-pyright', 'coc-sh', 'coc-vimtex', 'coc-java', 'coc-sql']
 
 "Allow rg faster search
 if executable('rg')
