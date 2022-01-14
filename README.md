@@ -127,6 +127,17 @@ Godot with vim:
 | fuzzymatch          | dmenu | Support for fuzzy-matching                          |
 | dwmlogo             | slock | Draws the dwm logo                                  |
 
+
+### Encrypt grub password using grub-crypt
+1. Create encrypted password using grub-crypt
+2. Modify grub.conf file, add the "password" entry with the --encrypted argument followed
+by the grub-crypt output (Last line corresponding to the encrypted password, not the one introduced)
+3. Finally:
+```bash
+sudo update-grub
+```
+
+
 # TODO-LIST
 - Vim debug C++ configuration/maps.
 - ssh, fail2ban config.
