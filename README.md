@@ -8,7 +8,6 @@
 
 ```bash
 sudo apt-get install build-essential desktop-base firmware-misc-nonfree firmware-linux-nonfree cmake clangd python3-dev default-jdk mono-complete manpages-dev git curl net-tools rxvt-unicode
-mariadb-server mariadb-client libmariadb-java
 ```
 Non-free firmware not included in installation script.
 
@@ -141,4 +140,3 @@ sudo update-grub
 # TODO-LIST
 - Vim debug C++ configuration/maps.
 - ssh, fail2ban config.
-- mutt proton-bridge configuration.
