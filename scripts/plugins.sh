@@ -26,8 +26,8 @@ tmux_post()
 # Vifm colors
 vifm_colors()
 {
-  rm -rf ~/.config/vifm/colors
-  git clone https://github.com/vifm/vifm-colors ~/.config/vifm/colors
+  rm -rf ~/.vifm/colors
+  git clone https://github.com/vifm/vifm-colors ~/.vifm/colors
 }
 
 # Run
