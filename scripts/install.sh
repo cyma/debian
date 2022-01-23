@@ -9,9 +9,8 @@ then
 fi
 
 # Basics
-BASICS_LIST="build-essential desktop-base manpages-dev cmake clangd python3-dev default-jdk mono-complete git curl net-tools rxvt-unicode
-mariadb-client mariadb-server libmariadb-java"
-# firmware-misc-nonfree and firmware-linux-nonfree removed, install manually.
+BASICS_LIST="build-essential manpages-dev cmake clangd python3-dev default-jdk mono-complete git curl net-tools rxvt-unicode nextcloud-desktop"
+# firmware-misc-nonfree, firmware-linux-nonfree, mono-complete and desktop-base, install manually.
 
 # Security
 SECURITY_LIST="gnome-keyring seahorse debsecan apt-listchanges apt-listbugs resolvconf firewalld firewall-config macchanger fail2ban exim4 watchdog nmap openvpn mat2 debsums lynis
@@ -35,7 +34,7 @@ UTIL_LIST="calcurse lm-sensors acpi acpid zathura libreoffice mutt firefox-esr f
 FM_LIST="vifm atool caca-utils mediainfo highlight poppler-utils w3m w3m-img imagemagick"
 
 # Packages
-PACK_LIST="dh-make devscripts fakeroot lintian dia"
+PACK_LIST="dh-make devscripts fakeroot lintian dia qtcreator"
 
 # LaTeX
 TEX_LIST="texlive texlive-science texlive-pictures texlive-latex-extra \

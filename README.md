@@ -7,9 +7,8 @@
 ###### Basics
 
 ```bash
-sudo apt-get install build-essential desktop-base firmware-misc-nonfree firmware-linux-nonfree cmake clangd python3-dev default-jdk mono-complete manpages-dev git curl net-tools rxvt-unicode
+sudo apt-get install build-essential firmware-misc-nonfree firmware-linux-nonfree cmake clangd python3-dev default-jdk mono-complete manpages-dev git curl net-tools rxvt-unicode nextcloud-desktop
 ```
-Non-free firmware not included in installation script.
 
 ###### Security
 
@@ -76,7 +75,7 @@ git clone https://github.com/vifm/vifm-colors ~/.config/vifm/colors
 ###### Packages
 
 ```bash
-sudo apt-get install dh-make devscripts fakeroot lintian dia
+sudo apt-get install dh-make devscripts fakeroot lintian dia qtcreator
 ```
 
 ###### LaTeX
@@ -125,16 +124,6 @@ Godot with vim:
 | case-insensitive    | dmenu | Case-insensitive item matching                      |
 | fuzzymatch          | dmenu | Support for fuzzy-matching                          |
 | dwmlogo             | slock | Draws the dwm logo                                  |
-
-
-### Encrypt grub password using grub-crypt
-1. Create encrypted password using grub-crypt
-2. Modify grub.conf file, add the "password" entry with the --encrypted argument followed
-by the grub-crypt output (Last line corresponding to the encrypted password, not the one introduced)
-3. Finally:
-```bash
-sudo update-grub
-```
 
 
 # TODO-LIST

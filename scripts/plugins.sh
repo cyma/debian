@@ -30,17 +30,6 @@ vifm_colors()
   git clone https://github.com/vifm/vifm-colors ~/.config/vifm/colors
 }
 
-# Vifm post-install (Colorschemes)
-vifm_post()
-{
-  if [[ -d "${HOME}/.config/vifm/" ]]
-  then
-    vifm_colors
-  else
-    echo "Vifm directory not detected. Run vifm to create it"
-  fi
-}
-
 # Run
 echo "1. All"
 echo "2. Vim"
@@ -55,7 +44,7 @@ case ${MENU_OPT} in
   1)
     vim_post
     tmux_post
-    vifm_post
+    vifm_colors
     ;;
   2)
     vim_post
@@ -64,7 +53,7 @@ case ${MENU_OPT} in
     tmux_post
     ;;
   4)
-    vifm_post
+    vifm_colors
     ;;
   5)
     return 0
