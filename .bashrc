@@ -112,6 +112,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Blinking underline cursor
+echo -e -n "\x1b[\x33 q"
+
 # custom xsets
 if [ -n "$DISPLAY" ]
 then
