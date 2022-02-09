@@ -74,6 +74,6 @@ static const struct arg args[] = {
   { temp, "TEMP: %s º C  ", "/sys/class/thermal/thermal_zone1/temp" },
   { ram_used, "RAM: %s  ", NULL},
   { ipv4, "IPv4: %s ", "wlp3s0"},
-  { run_command, " %s  ", "if [[ -d /proc/sys/net/ipv4/conf/tun0 ]]; then echo 'VPN: ON'; else echo 'VPN: OFF'; fi"},
+  { run_command, " %s  ", "bash ~/Repo/suckless/slstatus/components/vpn_detector.sh"},
   { battery_perc, "BAT: %s %% ", "BAT0"},
 };

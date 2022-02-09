@@ -75,7 +75,7 @@ git clone https://github.com/vifm/vifm-colors ~/.config/vifm/colors
 ###### Packages
 
 ```bash
-sudo apt-get install dh-make devscripts fakeroot lintian dia qtcreator
+sudo apt-get install dh-make devscripts fakeroot lintian dia qtcreator libboost-all-dev
 ```
 
 ###### LaTeX

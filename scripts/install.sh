@@ -34,7 +34,7 @@ UTIL_LIST="calcurse lm-sensors acpi acpid zathura libreoffice mutt firefox-esr f
 FM_LIST="vifm atool caca-utils mediainfo highlight poppler-utils w3m w3m-img imagemagick"
 
 # Packages
-PACK_LIST="dh-make devscripts fakeroot lintian dia qtcreator"
+PACK_LIST="dh-make devscripts fakeroot lintian dia qtcreator libboost-all-dev"
 
 # LaTeX
 TEX_LIST="texlive texlive-science texlive-pictures texlive-latex-extra \

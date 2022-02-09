@@ -22,6 +22,7 @@ Plug 'vimwiki/vimwiki'
 Plug 'yegappan/grep'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/nerdtree'
 Plug 'universal-ctags/ctags'
 Plug 'majutsushi/tagbar'
 Plug 'vifm/vifm.vim'
@@ -186,6 +187,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+"Vimwiki
+let g:vimwiki_list = [{'path': '~/Nextcloud/vimwiki/'}]
 
 "Coc extensions
 let g:coc_global_extensions = ['coc-clangd', 'coc-cmake', 'coc-pyright', 'coc-sh', 'coc-vimtex', 'coc-java', 'coc-sql']
@@ -222,7 +225,7 @@ let g:fzf_action = {
 "LaTeX
 let g:tex_flavor='latex'
 let g:livepreview_previewer = 'zathura'
-let g:livepreview_engine = 'pdflatex'
+let g:livepreview_engine = 'xelatex'
 let g:livepreview_cursorhold_recompile = 0
 
 "Maps
@@ -234,6 +237,7 @@ nnoremap <leader>v :LLPStartPreview
 nnoremap <leader>tag :TagbarToggle<CR>
 
 nnoremap <leader>u :UndotreeToggle<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>.ht :!open %<CR>
 nnoremap <leader>ff :Files<CR>
 
