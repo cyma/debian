@@ -37,7 +37,7 @@ FM_LIST="vifm atool caca-utils mediainfo highlight poppler-utils w3m w3m-img ima
 PACK_LIST="dh-make devscripts fakeroot lintian dia qtcreator libboost-all-dev"
 
 # LaTeX
-TEX_LIST="texlive texlive-science texlive-pictures texlive-latex-extra \
+TEX_LIST="texlive texlive-fonts-extra texlive-science texlive-pictures texlive-latex-extra \
           texlive-lang-english texlive-lang-spanish texlive-bibtex-extra \
           texlive-font-utils latexmk"
 

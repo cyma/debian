@@ -81,7 +81,7 @@ sudo apt-get install dh-make devscripts fakeroot lintian dia qtcreator libboost-
 ###### LaTeX
 
 ```bash
-sudo apt-get install texlive texlive-science texlive-pictures texlive-latex-extra \
+sudo apt-get install texlive texlive-fonts-extra texlive-science texlive-pictures texlive-latex-extra \
   texlive-lang-english texlive-lang-spanish texlive-bibtex-extra \
   texlive-font-utils latexmk
 ```
