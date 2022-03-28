@@ -40,7 +40,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ###### Suckless
 
 ```bash
-sudo apt-get install libxft2 libxft-dev x11-xserver-utils xorg xserver-xorg-dev libxinerama-dev libxrandr-dev
+sudo apt-get install libxft2 libxft-dev x11-xserver-utils xorg xserver-xorg-dev libxinerama-dev libxrandr-dev xclip
 ```
 
 ###### Tmux

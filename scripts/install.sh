@@ -22,7 +22,7 @@ VIM_LIST="vim-gtk ripgrep fzf universal-ctags nodejs npm"
 
 # Suckless
 SUCK_LIST="libxft2 libxft-dev x11-xserver-utils xorg xserver-xorg-dev \
-            libxinerama-dev libxrandr-dev"
+            libxinerama-dev libxrandr-dev xclip"
 
 # Tmux
 TMUX_LIST="tmux libevent-dev libncurses-dev"
