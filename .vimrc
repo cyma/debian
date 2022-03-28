@@ -7,7 +7,7 @@ set nocompatible
 filetype off
 
 "Don't let polyglot mess with tabs
-let g:polyglot_disabled=['autoindent']
+"let g:polyglot_disabled=['autoindent']
 
 call plug#begin('~/.vim/plugged')
 
@@ -33,10 +33,13 @@ Plug 'szw/vim-maximizer'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'scrooloose/syntastic'
-Plug 'sheerun/vim-polyglot'
+
+"Plug 'scrooloose/syntastic'
+"Plug 'sheerun/vim-polyglot'
+
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'uiiaoo/java-syntax.vim'
+
 Plug 'vim-utils/vim-man'
 Plug 'lervag/vimtex', { 'for': ['latex', 'tex'] }
 Plug 'xuhdev/vim-latex-live-preview', { 'for': ['latex', 'tex'], 'on': 'LLPStartPreview' }
@@ -101,7 +104,6 @@ if(g:colors_name == 'dracula')
     let g:dracula_bold = 1
     let g:dracula_italic = 0
     let g:lightline.colorscheme ='dracula'
-    "hi Normal guibg=#24242C
 endif
 
 
@@ -180,13 +182,14 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 let g:UltiSnipsExpandTrigger="<C-j>"
 
 "Synstastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+
 "Vimwiki
 let g:vimwiki_list = [{'path': '~/Nextcloud/vimwiki/'}]
 
