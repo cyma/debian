@@ -112,12 +112,4 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Blinking underline cursor
-echo -e -n "\x1b[\x33 q"
-
-# custom xsets
-if [ -n "$DISPLAY" ]
-then
-  xset b off
-  xset r rate 300 25
-fi
+export _JAVA_AWT_WM_NONREPARENTING=1
