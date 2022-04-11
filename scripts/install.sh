@@ -9,7 +9,7 @@ then
 fi
 
 # Basics
-BASICS_LIST="build-essential manpages-dev cmake clangd python3-dev default-jdk mono-complete git curl net-tools rxvt-unicode nextcloud-desktop"
+BASICS_LIST="build-essential manpages-dev cmake clangd python3-dev default-jdk git curl net-tools rxvt-unicode nextcloud-desktop"
 # firmware-misc-nonfree, firmware-linux-nonfree, mono-complete and desktop-base, install manually.
 
 # Security
@@ -34,7 +34,7 @@ UTIL_LIST="calcurse lm-sensors acpi acpid zathura libreoffice mutt firefox-esr f
 FM_LIST="vifm atool caca-utils mediainfo highlight poppler-utils w3m w3m-img imagemagick"
 
 # Packages
-PACK_LIST="dh-make devscripts fakeroot lintian dia qtcreator libboost-all-dev"
+PACK_LIST="dh-make devscripts fakeroot lintian dia qtcreator libboost-all-dev sqlitebrowser"
 
 # LaTeX
 TEX_LIST="texlive texlive-fonts-extra texlive-science texlive-pictures texlive-latex-extra \

@@ -7,7 +7,7 @@
 ###### Basics
 
 ```bash
-sudo apt-get install build-essential firmware-misc-nonfree firmware-linux-nonfree cmake clangd python3-dev default-jdk mono-complete manpages-dev git curl net-tools rxvt-unicode nextcloud-desktop
+sudo apt-get install build-essential firmware-misc-nonfree firmware-linux-nonfree cmake clangd python3-dev default-jdk manpages-dev git curl net-tools rxvt-unicode nextcloud-desktop
 ```
 
 ###### Security
@@ -75,7 +75,7 @@ git clone https://github.com/vifm/vifm-colors ~/.config/vifm/colors
 ###### Packages
 
 ```bash
-sudo apt-get install dh-make devscripts fakeroot lintian dia qtcreator libboost-all-dev
+sudo apt-get install dh-make devscripts fakeroot lintian dia qtcreator libboost-all-dev sqlitebrowser
 ```
 
 ###### LaTeX
