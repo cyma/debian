@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "IBM Plex Mono:pixelsize=13:antialias=true:autohint=true";
+static char *font = "IBM Plex Mono:pixelsize=12:antialias=true:autohint=true";
 
 /* disable bold, italic and roman fonts globally */
 int disablebold = 0;
