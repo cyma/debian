@@ -10,7 +10,7 @@ fi
 
 # Basics
 BASICS_LIST="build-essential manpages-dev cmake clangd python3-dev default-jdk git curl net-tools rxvt-unicode nextcloud-desktop"
-# firmware-misc-nonfree, firmware-linux-nonfree, mono-complete and desktop-base, install manually.
+# firmware-misc-nonfree, firmware-linux-nonfree and desktop-base, install manually.
 
 # Security
 SECURITY_LIST="gnome-keyring seahorse debsecan apt-listchanges apt-listbugs resolvconf firewalld firewall-config macchanger fail2ban exim4 watchdog nmap openvpn mat2 debsums lynis
@@ -18,7 +18,8 @@ needrestart libpam-tmpdir auditd sysstat clamav arp-scan aircrack-ng hydra"
 # Aide removed, install manually.
 
 # Vim
-VIM_LIST="vim-gtk ripgrep fzf universal-ctags nodejs npm"
+VIM_LIST="vim-gtk ripgrep fzf universal-ctags"
+# npm, nodejs install manually
 
 # Suckless
 SUCK_LIST="libxft2 libxft-dev x11-xserver-utils xorg xserver-xorg-dev \
@@ -63,7 +64,6 @@ install_packages()
         ${UTIL_LIST}     \
         ${FM_LIST}       \
         ${PACK_LIST}     \
-        ${TEX_LIST}      \
         ${SCI_LIST}      \
         ${GODOT_LIST}
 
@@ -88,7 +88,7 @@ firewall_config()
         # Confirm interface name
         read -p "Confirm enabling firewalld for interface ${INTERFACE_NAME} [Y/n] " USER_CONFIRMATION
         echo "${USER_CONFIRMATION}"
-        if [[ ( "${USER_CONFIRMATION}" != "y" )  && (( "${USER_CONFIRMATION}" != "Y" )) ]]
+        if [[ ( "${USER_CONFIRMATION}" != "y" )  || (( "${USER_CONFIRMATION}" != "Y" )) ]]
         then
         echo "Operation canceled"
         else
