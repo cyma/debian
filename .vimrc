@@ -6,9 +6,6 @@ syntax on
 set nocompatible
 filetype off
 
-"Don't let polyglot mess with tabs
-"let g:polyglot_disabled=['autoindent']
-
 call plug#begin('~/.vim/plugged')
 
 "Plug 'tpope/vim-projectionist'
@@ -16,7 +13,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
-Plug 'raimondi/delimitmate'
 Plug 'vimwiki/vimwiki'
 
 Plug 'yegappan/grep'
@@ -31,10 +27,9 @@ Plug 'mbbill/undotree'
 Plug 'szw/vim-maximizer'
 
 Plug 'valloric/youcompleteme'
+Plug 'jiangmiao/auto-pairs'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
-
-Plug 'scrooloose/syntastic'
 Plug 'sheerun/vim-polyglot'
 
 Plug 'octol/vim-cpp-enhanced-highlight'
@@ -181,20 +176,13 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 "Snips
 let g:UltiSnipsExpandTrigger="<C-j>"
 
-"Synstastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
 "Vimwiki
 let g:vimwiki_list = [{'path': '~/Nextcloud/vimwiki/'}]
 
 "YCM
-let g:syntastic_java_checkers = []
+let g:ycm_show_detailed_diag_in_popup=1
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 "Allow rg faster search
 if executable('rg')
