@@ -18,7 +18,7 @@ needrestart libpam-tmpdir auditd sysstat clamav arp-scan aircrack-ng hydra"
 # Aide removed, install manually.
 
 # Vim
-VIM_LIST="vim-gtk ripgrep fzf universal-ctags"
+VIM_LIST="vim-gtk3 ripgrep fzf universal-ctags"
 # npm, nodejs install manually
 
 # Suckless
