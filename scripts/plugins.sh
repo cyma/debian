@@ -3,6 +3,8 @@
 # This script handles external repositories in order to get plugins working
 # on vim and others.
 
+repo_path=$HOME/Repo/dotfiles/
+
 # Vim post-install (Plugin Manager)
 vim_post()
 {
@@ -17,6 +19,7 @@ vim_post()
   fi
 }
 
+
 # Tmux post-install (Plugin Manager)
 tmux_post()
 {
@@ -28,6 +31,7 @@ vifm_colors()
 {
   rm -rf ~/.vifm/colors
   git clone https://github.com/vifm/vifm-colors ~/.vifm/colors
+  ln -s -f "$repo_path"vifmrc $HOME/.vifm/vifmrc
 }
 
 # Run

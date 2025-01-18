@@ -9,8 +9,8 @@ then
 fi
 
 # Basics
-BASICS_LIST="build-essential manpages-dev cmake clangd python3-dev default-jdk git curl net-tools rxvt-unicode nextcloud-desktop"
-# firmware-misc-nonfree, firmware-linux-nonfree and desktop-base, install manually.
+BASICS_LIST="build-essential manpages-dev cmake clangd python3-dev default-jdk git curl net-tools rxvt-unicode"
+# nextcloud-desktop, firmware-misc-nonfree, firmware-linux-nonfree and desktop-base, install manually.
 
 # Security
 SECURITY_LIST="gnome-keyring seahorse debsecan apt-listchanges apt-listbugs resolvconf firewalld firewall-config macchanger fail2ban exim4 watchdog nmap openvpn mat2 debsums lynis
@@ -36,11 +36,6 @@ FM_LIST="vifm atool caca-utils mediainfo highlight poppler-utils w3m w3m-img ima
 
 # Packages
 PACK_LIST="dh-make devscripts fakeroot lintian dia qtcreator libboost-all-dev sqlitebrowser"
-
-# LaTeX
-TEX_LIST="texlive texlive-fonts-extra texlive-science texlive-pictures texlive-latex-extra \
-          texlive-lang-english texlive-lang-spanish texlive-bibtex-extra \
-          texlive-font-utils latexmk"
 
 # Science
 SCI_LIST="octave"
@@ -89,12 +84,12 @@ firewall_config()
         read -p "Confirm enabling firewalld for interface ${INTERFACE_NAME} [Y/n] " USER_CONFIRMATION
         echo "${USER_CONFIRMATION}"
         if [[ ( "${USER_CONFIRMATION}" != "y" )  || (( "${USER_CONFIRMATION}" != "Y" )) ]]
-        then
-        echo "Operation canceled"
-        else
-        # Enable firewalld
-        sudo firewall-cmd --permanent --zone=public --change-interface=${INTERFACE_NAME}
-        fi
+            then
+                # Enable firewalld
+                sudo firewall-cmd --permanent --zone=public --change-interface=${INTERFACE_NAME}
+            else
+                echo "Operation canceled"
+            fi
   else
       echo "Firewalld not configured"
   fi
