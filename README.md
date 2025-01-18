@@ -1,6 +1,7 @@
 # debian
 - Dotfiles, suckless-tools, other software.
 
+- Main font: fonts-ibm-plex (contrib)
 
 Godot with vim:
 1. editor settings / external
